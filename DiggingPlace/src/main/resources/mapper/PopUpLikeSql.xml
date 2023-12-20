@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTDMapper3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="boot.data.mapper.PopupLikeMapperInter">
+
+<insert id="insertPopupLike" parameterType="PopupLikeDto">
+		insert into popup_like values(null, #{popup_num}, #{member_num})
+</insert>
+
+<delete id="deletePopupLike" parameterType="Map">
+		delete from popup_like where popup_num=#{popup_num} and member_num=#{member_num}
+</delete>
+
+<select id="PopupLikeCheck"  parameterType="Map" resultType="int">
+		select count(*) from popup_like  where popup_num = #{popup_num} and member_num =#{member_num}
+</select> 
+
+
+<select id="PopupLikeCount" resultType="int">
+		select count(*) from popup_like where popup_num=#{popup_num}
+</select>
+
+
+
+ <select id="findMemberPopupNum" parameterType="String" resultType="Map">
+    	select popup_num from popup_like where member_num=#{member_num} 
+    </select>
+   
+  
+ </mapper>

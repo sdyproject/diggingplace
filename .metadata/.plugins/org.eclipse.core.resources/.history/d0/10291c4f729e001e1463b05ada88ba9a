@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTDMapper3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="boot.data.mapper.MemberMapperInter">
+
+
+	<select id="getAllMember" resultType="MemberDto">
+		select * from member order by member_email asc
+	</select>
+
+	<!--회원가입 -->
+	<insert id="insertMember" parameterType="MemberDto">
+		insert into member(member_name,member_nickname,member_email,member_pass,member_hp,member_gender,member_birth,member_joinday ) values 
+		(#{member_name},#{member_nickname},#{member_email},#{member_pass},#{member_hp},#{member_gender},#{member_birth},now())
+	</insert>
+
+
+	<!--아아디 중복체크 -->
+	<select id="getSearchEmail" parameterType="String" resultType="int">
+		select count(*)
+		from member where
+		 member_email=#{member_email}
+	</select>
+	<!-- 닉네임 중복 체크 -->
+	<select id="getSearchNinkname" parameterType="String" resultType="int">
+		select count(*) 
+		from member 
+		where member_nickname=#{member_nickname}
+	</select>
+	
+	<!--프로필 관리 닉네임 중복 체크 -->
+	<select id="getUpdateNinkname" parameterType="Map" resultType="int">
+		select count(*) 
+		from member 
+		where member_nickname=#{member_nickname} and member_num!=#{member_num}
+	</select>
+
+
+	<!--id에 따른 이름 변경 -->
+	<select id="getMemberName" parameterType="String" resultType="String">
+		select member_nickname from member where member_email=#{member_email}
+	</select>
+
+
+	<!--id와 pass 파라메타로 넘겨서 (map) 1 or 0 -->
+	<select id="LoginEmailPassCheck" parameterType="Map" resultType="int">
+		select count(*) 
+		from member 
+		where member_email = #{member_email} and member_pass = #{member_pass}
+	</select>
+
+
+	<select id="getDataByEmail" parameterType="String" resultType="MemberDto">
+		select * from member where member_email=#{member_email}
+	</select>
+
+
+	<!--회원삭제 -->
+	<delete id="deleteMember" parameterType="String">
+		delete from member where member_num=#{member_num}
+	</delete>
+	
+	
+	<!-- 프로필 수정 -->
+    <update id="MemberProfileUpdate" parameterType="MemberDto">
+    	update member set member_nickname=#{member_nickname},member_pass=#{member_pass},member_hp=#{member_hp},member_birth=#{member_birth} 
+	    	<if test="member_photo!=null">
+	    	,member_photo=#{member_photo}
+	    	</if>
+    	where member_num=#{member_num}
+    </update>
+	
+	<select id="getDataByMemberNum"  parameterType="String" resultType="MemberDto">
+	select * from member where member_num=#{member_num}
+	</select>
+	
+	 <select id="findEmailMemberNum" parameterType="String" resultType="String">
+    	select member_num from member where member_email=#{member_email}
+    </select>
+	
+	<select id="findKakao" parameterType="java.util.HashMap" resultType="memberDto">
+		select * from member where member_name=#{member_nickname} and member_email=#{member_email}
+	</select>
+	
+	<insert id="kakaoInsert" parameterType="java.util.HashMap">
+		insert into member(member_name, member_email, member_gender ,member_joinday)
+			values(#{member_nickname}, #{member_email},#{member_gender},now())
+	</insert>
+	
+	 <select id="MemberEmailCheck" parameterType="Map" resultType="int">
+        select count(*)
+        from member
+        where member_name =#{member_name}
+          and member_birth =#{member_birth}
+          and member_hp =#{member_hp}
+    </select>
+    
+    <select id="FindMemberEmail" parameterType="Map" resultType="String">
+    select member_email 
+    from member
+    where member_name= #{member_name}
+    </select>
+    
+     <select id="MemberPassCheck" parameterType="Map" resultType="int">
+        select count(*)
+        from member
+        where member_name =#{member_name}
+          and member_hp =#{member_hp}
+          and member_email =#{member_email}
+    </select>
+    
+    <select id="FindMemberPass" parameterType="Map" resultType="String">
+    select member_pass 
+    from member
+    where member_name= #{member_name}
+    </select>
+    
+    <update id="updatepass">
+    update member set member_pass=#{member_pass} where member_email={member_email}
+    </update>
+    
+    <select id="getMemberReview" parameterType="String" resultType="memberDto">
+    select member_name,r.member_num,member_photo,member_nickname,review_content,review_writeday,review_score,review_num,r.exhibition_num from member m join review r
+	on m.member_num = r.member_num 
+	where exhibition_num = #{exhibition_num} order by review_writeday desc limit 6
+    </select>
+    
+    <select id="getMemberPopupsReview" parameterType="String" resultType="memberDto">
+    select r.member_num,member_photo,member_nickname,review_content,review_writeday,review_score,review_num,r.popup_num from member m join review r
+	on m.member_num = r.member_num 
+	where popup_num = #{popup_num} order by review_writeday desc limit 6
+    </select>
+    
+    
+    <select id="getMemberReviewList" parameterType="HashMap" resultType="memberDto">
+    select r.member_num,member_photo,member_nickname,review_content,review_writeday,review_score,review_num from member m join review r
+	on m.member_num = r.member_num 
+	where exhibition_num=#{exhibition_num} order by review_writeday desc limit #{start},#{perpage} 
+    </select>
+    
+       <select id="getMemberPopupReviewList" parameterType="HashMap" resultType="memberDto">
+    select r.member_num,member_photo,member_nickname,review_content,review_writeday,review_score,review_num from member m join review r
+	on m.member_num = r.member_num 
+	where popup_num=#{popup_num} order by review_writeday desc limit #{start},#{perpage} 
+    </select>
+    
+    
+     <select id="memberEmail" parameterType="String" resultType="int">
+        select count(*) from member where member_email=#{member_email}
+    </select>
+    <update id="updateTemporarilyPass" parameterType="Map">
+        update user set member_pass=#{member_pass} where member_email=#{member_email}
+    </update>
+  
+    
+    
+	
+	
+</mapper>

@@ -1,0 +1,120 @@
+<?xml version="1.0" ?>
+<SAVED_DATA>
+	<bookmarks>
+		<jdbcDriver className="com.mysql.cj.jdbc.Driver" name="MySQL Connector/J" type="MYSQL" version="mysql-connector-j-8.0.32 (Revision: fa4912a849140828e48162a2c396c8df0091bed7)">
+			<jar fileName="C:\sist1226\util\mysql-connector-j-8.0.32.jar" />
+		</jdbcDriver>
+		<jdbcDriver className="org.apache.derby.jdbc.EmbeddedDriver" name="org.apache.derby.jdbc.EmbeddedDriver" type="DERBY" version="">
+			<jar fileName="C:/sist1226/util/sts-4.18.0.RELEASE/plugins/com.quantum.derby_3.3.10/lib/derby.jar" />
+		</jdbcDriver>
+		<bookmark>
+			<name>(Internal) Derby</name>
+			<username>QUANTUM</username>
+			<password />
+			<prompt>false</prompt>
+			<connect>jdbc:derby:C:/sist1226/util/sts-4.18.0.RELEASE/plugins/com.quantum.derby_3.3.10/data/quantum</connect>
+			<autoCommit>true</autoCommit>
+			<autoCommitPreference>Always True</autoCommitPreference>
+			<autoCommitIgnoreView>false</autoCommitIgnoreView>
+			<quoteAll>false</quoteAll>
+			<sendQueryAsIs>false</sendQueryAsIs>
+			<stripNewline>false</stripNewline>
+			<shutdownOnDisconnect>true</shutdownOnDisconnect>
+			<defaultEncoding />
+			<driver>org.apache.derby.jdbc.EmbeddedDriver</driver>
+			<type>DERBY</type>
+			<substituteVariables>false</substituteVariables>
+			<variablesRegexp>\$\{(.*?)\}</variablesRegexp>
+			<driverLocation>C:/sist1226/util/sts-4.18.0.RELEASE/plugins/com.quantum.derby_3.3.10/lib/derby.jar</driverLocation>
+			<Other_Schemas schemaRule="useAll" />
+			<quickList />
+			<queryList />
+		</bookmark>
+		<bookmark>
+			<name>seo</name>
+			<username>dragon</username>
+			<password>1234</password>
+			<prompt>false</prompt>
+			<connect>jdbc:mysql://localhost:3306/seo?serverTimezone=Asia/Seoul</connect>
+			<autoCommit>true</autoCommit>
+			<autoCommitPreference>Always True</autoCommitPreference>
+			<autoCommitIgnoreView>false</autoCommitIgnoreView>
+			<quoteAll>false</quoteAll>
+			<sendQueryAsIs>false</sendQueryAsIs>
+			<stripNewline>false</stripNewline>
+			<shutdownOnDisconnect>false</shutdownOnDisconnect>
+			<defaultEncoding />
+			<driver>com.mysql.cj.jdbc.Driver</driver>
+			<type>MYSQL</type>
+			<substituteVariables>false</substituteVariables>
+			<variablesRegexp>\$\{(.*?)\}</variablesRegexp>
+			<driverLocation>C:\sist1226\util\mysql-connector-j-8.0.32.jar</driverLocation>
+			<Other_Schemas schemaRule="useSelected">
+				<schema>seo</schema>
+			</Other_Schemas>
+			<quickList />
+			<queryList>
+				<query>
+					<queryString>DELETE FROM member WHERE (member_num = 34)</queryString>
+				</query>
+				<query>
+					<queryString>alter table exhibition add like_count int</queryString>
+				</query>
+				<query>
+					<queryString>alter table exhibition drop  exhibitionLikeCheck</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM exhibition_like WHERE (exhibition_like_num = 177)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM member WHERE (member_num = 35)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM exhibition_like WHERE (exhibition_like_num = 188)</queryString>
+				</query>
+				<query>
+					<queryString></queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM exhibition_like WHERE (exhibition_like_num = 183)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM exhibition_like WHERE (exhibition_like_num = 190)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM exhibition_like WHERE (exhibition_like_num = 185)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM exhibition WHERE (exhibition_num = 282)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM exhibition_like WHERE (exhibition_like_num = 196)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM exhibition_like WHERE (exhibition_like_num = 195)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM exhibition_like WHERE (exhibition_like_num = 194)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM exhibition_like WHERE (exhibition_like_num = 193)</queryString>
+				</query>
+				<query>
+					<queryString>select exhibition_num from exhibition_like where &quot;7&quot;</queryString>
+				</query>
+				<query>
+					<queryString>select exhibition_num, exhibition_price, exhibition_subject, exhibition_location, exhibition_term from exhibition where exhibition_num in (select exhibition_num from exhibition_like where member_num=&quot;1&quot;)</queryString>
+				</query>
+				<query>
+					<queryString>select exhibition_num, exhibition_price, exhibition_subject, exhibition_location, exhibition_term from exhibition where exhibition_num in (select exhibition_num from exhibition_like where member_num=&quot;7&quot;)</queryString>
+				</query>
+				<query>
+					<queryString>select exhibition_price, exhibition_subject, exhibition_location, exhibition_term, exhibition_image from exhibition e inner join exhibition_like l on e.exhibition_num = l.exhibition_num</queryString>
+				</query>
+				<query>
+					<queryString>select exhibition_price, exhibition_subject, exhibition_location, exhibition_term, exhibition_image,member_num from exhibition e inner join exhibition_like l on e.exhibition_num = l.exhibition_num</queryString>
+				</query>
+			</queryList>
+		</bookmark>
+	</bookmarks>
+</SAVED_DATA>

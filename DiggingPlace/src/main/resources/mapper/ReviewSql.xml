@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTDMapper3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="boot.data.mapper.ReviewMapperInter">
+
+<insert id="insertReview" parameterType="ReviewDto">
+	insert into review(review_content,member_num,exhibition_num,review_score,review_writeday)
+	values (#{review_content},#{member_num},#{exhibition_num},#{review_score},now())
+</insert>
+
+<insert id="insertPopupReview" parameterType="ReviewDto">
+	insert into review(review_content,member_num,popup_num,review_score,review_writeday)
+	values (#{review_content},#{member_num},#{popup_num},#{review_score},now())
+</insert>
+
+<select id="reviewlist" parameterType="String" resultType="ReviewDto">
+	select * from review where exhibition_num=#{exhibition_num} 
+</select>
+
+<select id="PopupReviewReviewlist" parameterType="String" resultType="ReviewDto">
+	select * from review where popup_num=#{popup_num}
+</select>
+<select id="myReviewlist" parameterType="hashMap" resultType="ReviewDto">
+select * from review where member_num=#{member_num} order by review_writeday  limit #{start},#{perpage} 
+</select>
+
+<select id="scoreSum"  resultType="integer">
+	select sum(review_score) from review where exhibition_num=#{exhibition_num}
+</select>
+
+<select id="PopupReviewScoreSum"  resultType="integer">
+	select sum(review_score) from review where popup_num=#{popup_num}
+</select>
+
+<select id="reviewCount" parameterType="String" resultType="int">
+ 	select count(*) from  review 
+	where exhibition_num = #{exhibition_num}  
+</select>
+
+<select id="PopupReviewCount" parameterType="String" resultType="int">
+ 	select count(*) from  review 
+	where popup_num = #{popup_num}  
+</select>
+
+<delete id="deleteReview" parameterType="Map" >
+	delete from review where review_num=#{review_num} 
+</delete>
+
+
+<select id="writeReviewCount" resultType="int">
+		select count(*) from review where member_num=#{member_num}
+</select>
+
+<select id="getReviewCount" resultType="int">
+select  count(distinct e.exhibition_num)
+from exhibition e left join review r 
+on e.exhibition_num = r.exhibition_num 
+</select>
+
+<select id="getPopupReviewCount" resultType="int">
+select  count(distinct e.popup_num)
+from popup e left join review r 
+on e.popup_num = r.popup_num 
+</select>
+
+<update id="updateReview" parameterType="ReviewDto">
+	update review set review_content=#{review_content}, review_score=#{review_score} where review_num=#{review_num}
+</update>
+
+<select id="getDataByReviewNum" resultType="ReviewDto" parameterType="String">
+	select * from review where review_num=#{review_num}
+	</select>
+	
+	<!--전시회 후기 중복체크 -->
+	<select id="getSearchReview" parameterType="Map" resultType="int">
+		select count(*)
+		from review where
+		 exhibition_num=#{exhibition_num} and member_num=#{member_num}
+	</select>
+	
+	<!--전시회 후기 중복체크 -->
+	<select id="getSearchPopupReview" parameterType="Map" resultType="int">
+		select count(*)
+		from review where
+		 popup_num=#{popup_num} and member_num=#{member_num}
+	</select>
+
+ </mapper>

@@ -1,0 +1,146 @@
+<?xml version="1.0" ?>
+<SAVED_DATA>
+	<bookmarks>
+		<jdbcDriver className="com.mysql.cj.jdbc.Driver" name="MySQL Connector/J" type="MYSQL" version="mysql-connector-j-8.0.32 (Revision: fa4912a849140828e48162a2c396c8df0091bed7)">
+			<jar fileName="C:\sist1226\util\mysql-connector-j-8.0.32.jar" />
+		</jdbcDriver>
+		<jdbcDriver className="org.apache.derby.jdbc.EmbeddedDriver" name="org.apache.derby.jdbc.EmbeddedDriver" type="DERBY" version="">
+			<jar fileName="C:/sist1226/util/sts-4.18.0.RELEASE/plugins/com.quantum.derby_3.3.10/lib/derby.jar" />
+		</jdbcDriver>
+		<bookmark>
+			<name>(Internal) Derby</name>
+			<username>QUANTUM</username>
+			<password />
+			<prompt>false</prompt>
+			<connect>jdbc:derby:C:/sist1226/util/sts-4.18.0.RELEASE/plugins/com.quantum.derby_3.3.10/data/quantum</connect>
+			<autoCommit>true</autoCommit>
+			<autoCommitPreference>Always True</autoCommitPreference>
+			<autoCommitIgnoreView>false</autoCommitIgnoreView>
+			<quoteAll>false</quoteAll>
+			<sendQueryAsIs>false</sendQueryAsIs>
+			<stripNewline>false</stripNewline>
+			<shutdownOnDisconnect>true</shutdownOnDisconnect>
+			<defaultEncoding />
+			<driver>org.apache.derby.jdbc.EmbeddedDriver</driver>
+			<type>DERBY</type>
+			<substituteVariables>false</substituteVariables>
+			<variablesRegexp>\$\{(.*?)\}</variablesRegexp>
+			<driverLocation>C:/sist1226/util/sts-4.18.0.RELEASE/plugins/com.quantum.derby_3.3.10/lib/derby.jar</driverLocation>
+			<Other_Schemas schemaRule="useAll" />
+			<quickList />
+			<queryList />
+		</bookmark>
+		<bookmark>
+			<name>seo</name>
+			<username>dragon</username>
+			<password>1234</password>
+			<prompt>false</prompt>
+			<connect>jdbc:mysql://localhost:3306/seo?serverTimezone=Asia/Seoul</connect>
+			<autoCommit>true</autoCommit>
+			<autoCommitPreference>Always True</autoCommitPreference>
+			<autoCommitIgnoreView>false</autoCommitIgnoreView>
+			<quoteAll>false</quoteAll>
+			<sendQueryAsIs>false</sendQueryAsIs>
+			<stripNewline>false</stripNewline>
+			<shutdownOnDisconnect>false</shutdownOnDisconnect>
+			<defaultEncoding />
+			<driver>com.mysql.cj.jdbc.Driver</driver>
+			<type>MYSQL</type>
+			<substituteVariables>false</substituteVariables>
+			<variablesRegexp>\$\{(.*?)\}</variablesRegexp>
+			<driverLocation>C:\sist1226\util\mysql-connector-j-8.0.32.jar</driverLocation>
+			<Other_Schemas schemaRule="useSelected">
+				<schema>seo</schema>
+			</Other_Schemas>
+			<quickList />
+			<queryList>
+				<query>
+					<queryString>select count(*)from member where member_name = &quot;홍길동&quot;</queryString>
+				</query>
+				<query>
+					<queryString>select count(*)from member where member_nickname = &quot;홍길동&quot;</queryString>
+				</query>
+				<query>
+					<queryString>select count(*)from member where member_nickname</queryString>
+				</query>
+				<query>
+					<queryString>select count(*)from member</queryString>
+				</query>
+				<query>
+					<queryString>select count(*)from member where member_name</queryString>
+				</query>
+				<query>
+					<queryString>select count(*) 
+		from member 
+		where member_nickname=&quot;동서번쩍&quot;</queryString>
+				</query>
+				<query>
+					<queryString>select count(*) 
+		from member 
+		where member_name=&quot;서동익&quot;</queryString>
+				</query>
+				<query>
+					<queryString>select count(*) 
+		from member 
+		where member_name=&quot;박세연&quot;</queryString>
+				</query>
+				<query>
+					<queryString>select count(*) 
+		from member 
+		where member_name=&quot;홍길동&quot;</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM member WHERE (member_num = 47)</queryString>
+				</query>
+				<query>
+					<queryString>select member_email 
+		from member 
+		where member_name=&quot;홍길동&quot;</queryString>
+				</query>
+				<query>
+					<queryString>select member_email 
+		from member 
+		where member_name=&quot;서동익&quot;</queryString>
+				</query>
+				<query>
+					<queryString>select member_email 
+		from member 
+		where member_name=&quot;안녕&quot;</queryString>
+				</query>
+				<query>
+					<queryString>select member_email from member where member_name=&quot;서동익&quot;</queryString>
+				</query>
+				<query>
+					<queryString>select count(*)
+        from member
+        where member_name = &quot;안녕	&quot;
+          and member_birth = &quot;2023-11-23&quot;
+          and member_hp = &quot;01022223333&quot;</queryString>
+				</query>
+				<query>
+					<queryString>select count(*)
+        from member
+        where member_name = &quot;안녕	&quot;
+          and member_hp = &quot;01022223333&quot;</queryString>
+				</query>
+				<query>
+					<queryString>select count(*)
+        from member
+        where member_name = &quot;안녕	&quot;
+          and member_hp = 01022223333</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM member WHERE (member_num = 48)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM member WHERE (member_num = 50)</queryString>
+				</query>
+				<query>
+					<queryString>select member_email 
+    from member
+    where member_name=&quot;강민서&quot;</queryString>
+				</query>
+			</queryList>
+		</bookmark>
+	</bookmarks>
+</SAVED_DATA>

@@ -1,0 +1,161 @@
+<?xml version="1.0" ?>
+<SAVED_DATA>
+	<bookmarks>
+		<jdbcDriver className="com.mysql.cj.jdbc.Driver" name="MySQL Connector/J" type="MYSQL" version="mysql-connector-j-8.0.32 (Revision: fa4912a849140828e48162a2c396c8df0091bed7)">
+			<jar fileName="C:\sist1226\util\mysql-connector-j-8.0.32.jar" />
+		</jdbcDriver>
+		<jdbcDriver className="org.apache.derby.jdbc.EmbeddedDriver" name="org.apache.derby.jdbc.EmbeddedDriver" type="DERBY" version="">
+			<jar fileName="C:/sist1226/util/sts-4.18.0.RELEASE/plugins/com.quantum.derby_3.3.10/lib/derby.jar" />
+		</jdbcDriver>
+		<bookmark>
+			<name>(Internal) Derby</name>
+			<username>QUANTUM</username>
+			<password />
+			<prompt>false</prompt>
+			<connect>jdbc:derby:C:/sist1226/util/sts-4.18.0.RELEASE/plugins/com.quantum.derby_3.3.10/data/quantum</connect>
+			<autoCommit>true</autoCommit>
+			<autoCommitPreference>Always True</autoCommitPreference>
+			<autoCommitIgnoreView>false</autoCommitIgnoreView>
+			<quoteAll>false</quoteAll>
+			<sendQueryAsIs>false</sendQueryAsIs>
+			<stripNewline>false</stripNewline>
+			<shutdownOnDisconnect>true</shutdownOnDisconnect>
+			<defaultEncoding />
+			<driver>org.apache.derby.jdbc.EmbeddedDriver</driver>
+			<type>DERBY</type>
+			<substituteVariables>false</substituteVariables>
+			<variablesRegexp>\$\{(.*?)\}</variablesRegexp>
+			<driverLocation>C:/sist1226/util/sts-4.18.0.RELEASE/plugins/com.quantum.derby_3.3.10/lib/derby.jar</driverLocation>
+			<Other_Schemas schemaRule="useAll" />
+			<quickList />
+			<queryList />
+		</bookmark>
+		<bookmark>
+			<name>seo</name>
+			<username>dragon</username>
+			<password>1234</password>
+			<prompt>false</prompt>
+			<connect>jdbc:mysql://localhost:3306/seo?serverTimezone=Asia/Seoul</connect>
+			<autoCommit>true</autoCommit>
+			<autoCommitPreference>Always True</autoCommitPreference>
+			<autoCommitIgnoreView>false</autoCommitIgnoreView>
+			<quoteAll>false</quoteAll>
+			<sendQueryAsIs>false</sendQueryAsIs>
+			<stripNewline>false</stripNewline>
+			<shutdownOnDisconnect>false</shutdownOnDisconnect>
+			<defaultEncoding />
+			<driver>com.mysql.cj.jdbc.Driver</driver>
+			<type>MYSQL</type>
+			<substituteVariables>false</substituteVariables>
+			<variablesRegexp>\$\{(.*?)\}</variablesRegexp>
+			<driverLocation>C:\sist1226\util\mysql-connector-j-8.0.32.jar</driverLocation>
+			<Other_Schemas schemaRule="useSelected">
+				<schema>seo</schema>
+			</Other_Schemas>
+			<quickList />
+			<queryList>
+				<query>
+					<queryString>create table popup(popup_num int primary key auto_increment,
+popup_subject varchar(100),
+popup_location varchar(100),
+popup_Notice varchar(200),
+popup_category varchar(50),
+popup_content varchar(200),
+popup_term varchar(50),
+popup_image varchar(200))</queryString>
+				</query>
+				<query>
+					<queryString>create table member(member_num int primary key auto_increment,
+member_name varchar(50),
+member_nickname varchar(50),
+member_pass varchar(50),
+member_email varchar(100),
+member_hp int,
+member_gender varchar(20),
+member_birth date,
+member_photo varchar(100),
+member_joinday datetime)</queryString>
+				</query>
+				<query>
+					<queryString>create table Exhibition(Exhibition_num int primary key auto_increment,
+Exhibition_subject varchar(100),
+Exhibition_location varchar(100),
+Exhibition_Notice varchar(200),
+Exhibition_content varchar(200),
+Exhibition_category varchar(50),
+Exhibition_term varchar(50),
+Exhibition_price int,
+Exhibition_link varchar(100),
+Exhibition_image varchar(200))</queryString>
+				</query>
+				<query>
+					<queryString>create table popup_like(popup_like_num int primary key auto_increment,
+popup_num int,
+member_num  int,
+foreign key(popup_num) references popup(popup_num) on delete cascade,
+foreign key(member_num) references member(member_num) on delete cascade)</queryString>
+				</query>
+				<query>
+					<queryString>create table review(review_num int primary key auto_increment,
+review_content varchar(1000),
+review_writeday date,
+member_num int,
+popup_num int,
+foreign key(popup_num) references popup(popup_num) on delete cascade,
+foreign key(member_num) references member(member_num) on delete cascade)</queryString>
+				</query>
+				<query>
+					<queryString>drop table exhibition</queryString>
+				</query>
+				<query>
+					<queryString>create table exhibition(exhibition_num int primary key auto_increment,
+exhibition_subject varchar(100),
+exhibition_location varchar(100),
+exhibition_Notice varchar(200),
+exhibition_content varchar(200),
+exhibition_category varchar(50),
+exhibition_term varchar(50),
+exhibition_price int,
+exhibition_link varchar(100),
+exhibition_image varchar(200))</queryString>
+				</query>
+				<query>
+					<queryString>create table exhibition_like(exhibition_like_num int primary key auto_increment,
+exhibition_num int,
+member_num  int,
+foreign key(exhibition_num) references exhibition(exhibition_num) on delete cascade,
+foreign key(member_num) references member(member_num) on delete cascade)</queryString>
+				</query>
+				<query>
+					<queryString>drop table review</queryString>
+				</query>
+				<query>
+					<queryString>create table review(review_num int primary key auto_increment,
+review_content varchar(1000),
+review_writeday date,
+member_num int,
+popup_num int,
+exhibition_num int,
+foreign key(member_num) references member(member_num) on delete cascade,
+foreign key(popup_num) references popup(popup_num) on delete cascade,
+foreign key(exhibition_num) references exhibition(exhibition_num) on delete cascade)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM member WHERE (member_num = 1)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM member WHERE (member_num = 3)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM member WHERE (member_num = 4)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM member WHERE (member_num = 5)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM member WHERE (member_num = 6)</queryString>
+				</query>
+			</queryList>
+		</bookmark>
+	</bookmarks>
+</SAVED_DATA>

@@ -1,0 +1,122 @@
+<?xml version="1.0" ?>
+<SAVED_DATA>
+	<bookmarks>
+		<jdbcDriver className="com.mysql.cj.jdbc.Driver" name="MySQL Connector/J" type="MYSQL" version="mysql-connector-j-8.0.32 (Revision: fa4912a849140828e48162a2c396c8df0091bed7)">
+			<jar fileName="C:\sist1226\util\mysql-connector-j-8.0.32.jar" />
+		</jdbcDriver>
+		<jdbcDriver className="org.apache.derby.jdbc.EmbeddedDriver" name="org.apache.derby.jdbc.EmbeddedDriver" type="DERBY" version="">
+			<jar fileName="C:/sist1226/util/sts-4.18.0.RELEASE/plugins/com.quantum.derby_3.3.10/lib/derby.jar" />
+		</jdbcDriver>
+		<bookmark>
+			<name>(Internal) Derby</name>
+			<username>QUANTUM</username>
+			<password />
+			<prompt>false</prompt>
+			<connect>jdbc:derby:C:/sist1226/util/sts-4.18.0.RELEASE/plugins/com.quantum.derby_3.3.10/data/quantum</connect>
+			<autoCommit>true</autoCommit>
+			<autoCommitPreference>Always True</autoCommitPreference>
+			<autoCommitIgnoreView>false</autoCommitIgnoreView>
+			<quoteAll>false</quoteAll>
+			<sendQueryAsIs>false</sendQueryAsIs>
+			<stripNewline>false</stripNewline>
+			<shutdownOnDisconnect>true</shutdownOnDisconnect>
+			<defaultEncoding />
+			<driver>org.apache.derby.jdbc.EmbeddedDriver</driver>
+			<type>DERBY</type>
+			<substituteVariables>false</substituteVariables>
+			<variablesRegexp>\$\{(.*?)\}</variablesRegexp>
+			<driverLocation>C:/sist1226/util/sts-4.18.0.RELEASE/plugins/com.quantum.derby_3.3.10/lib/derby.jar</driverLocation>
+			<Other_Schemas schemaRule="useAll" />
+			<quickList />
+			<queryList />
+		</bookmark>
+		<bookmark>
+			<name>seo</name>
+			<username>dragon</username>
+			<password>1234</password>
+			<prompt>false</prompt>
+			<connect>jdbc:mysql://localhost:3306/seo?serverTimezone=Asia/Seoul</connect>
+			<autoCommit>true</autoCommit>
+			<autoCommitPreference>Always True</autoCommitPreference>
+			<autoCommitIgnoreView>false</autoCommitIgnoreView>
+			<quoteAll>false</quoteAll>
+			<sendQueryAsIs>false</sendQueryAsIs>
+			<stripNewline>false</stripNewline>
+			<shutdownOnDisconnect>false</shutdownOnDisconnect>
+			<defaultEncoding />
+			<driver>com.mysql.cj.jdbc.Driver</driver>
+			<type>MYSQL</type>
+			<substituteVariables>false</substituteVariables>
+			<variablesRegexp>\$\{(.*?)\}</variablesRegexp>
+			<driverLocation>C:\sist1226\util\mysql-connector-j-8.0.32.jar</driverLocation>
+			<Other_Schemas schemaRule="useSelected">
+				<schema>seo</schema>
+			</Other_Schemas>
+			<quickList />
+			<queryList>
+				<query>
+					<queryString>DELETE FROM review WHERE (review_num = 38)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM review WHERE (review_num = 37)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM review WHERE (review_num = 36)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM review WHERE (review_num = 35)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM review WHERE (review_num = 34)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM review WHERE (review_num = 40)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM review WHERE (review_num = 39)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM exhibition_like WHERE (exhibition_like_num = 294)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM exhibition_like WHERE (exhibition_like_num = 299)</queryString>
+				</query>
+				<query>
+					<queryString>select count(distinct exhibition_num) from review</queryString>
+				</query>
+				<query>
+					<queryString>show create table review</queryString>
+				</query>
+				<query>
+					<queryString>SHOW CREATE TABLE review</queryString>
+				</query>
+				<query>
+					<queryString>ALTER TABLE review DROP FOREIGN KEY review_ibfk_2</queryString>
+				</query>
+				<query>
+					<queryString>ALTER TABLE review DROP popup_num</queryString>
+				</query>
+				<query>
+					<queryString>select* from information_schema.table_constraints</queryString>
+				</query>
+				<query>
+					<queryString>select * from information_schema.table_constraints where table_name = 'review'</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM popup_review WHERE (popup_review_num = 1)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM popup_review WHERE (popup_review_num = 3)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM popup_review WHERE (popup_review_num = 2)</queryString>
+				</query>
+				<query>
+					<queryString>select member_photo,member_nickname,popup_review_content,popup_review_writeday,popup_review_score from member m join popup_review pr
+	on m.member_num = pr.member_num 
+	where popup_num = 1 order by popup_review_writeday desc limit 4</queryString>
+				</query>
+			</queryList>
+		</bookmark>
+	</bookmarks>
+</SAVED_DATA>

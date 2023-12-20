@@ -1,0 +1,17 @@
+INDEX VERSION 1.132
+C:\sist1226\diggingplace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3473996486.index
+\DiggingPlace\src\main\java
+C:\sist1226\diggingplace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\464325432.index
+\DiggingPlace\src\main\java
+C:\sist1226\diggingplace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2389271331.index
+\DiggingPlace\src\main\java
+C:\sist1226\diggingplace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2244897628.index
+\DiggingPlace\src\main\java
+C:\sist1226\diggingplace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\778620011.index
+\DiggingPlace\src\main\java
+C:\sist1226\diggingplace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1486373818.index
+\DiggingPlace\src\main\java
+C:\sist1226\diggingplace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1855357060.index
+\DiggingPlace\src\main\java
+C:\sist1226\diggingplace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3333915000.index
+\DiggingPlace\src\main\java

@@ -1,0 +1,421 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+<!-- Plugin -->
+<link rel="stylesheet"
+	href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css" />
+<script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR&display=swap"
+	rel="stylesheet">
+
+
+<style type="text/css">
+.myinfo-wrapper {
+	width: 650px;
+	height: 750px;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 50px;
+}
+
+/* #profile-management {
+	background-color: #6E6E6E;
+	width: 80px;
+	border-radius: 10px;
+	border: none;
+	height: 25px;
+	font-size: 10px;
+	color: white;
+} */
+.image-wrapper {
+	width: 280px;
+	height: 170px;
+	float: left;
+	/* border: 1px solid blue;  */
+	
+}
+
+#profile-img {
+	width: 150px;
+	height: 130px;
+	border-radius: 50%;
+	margin-top: 20px;
+	border: 1px solid #BDBDBD;
+	margin-left: 20px;
+}
+
+.profile-info {
+	width: 500px;
+	height: 200px;
+	 border-radius : 10px;
+	margin: 0 auto;
+	border-radius: 10px; margin : 0 auto;
+	margin-bottom: 7px;
+	box-shadow:0px 0px 5px #BDBDBD;
+}
+.info-wrapper li b {
+font-size: 13px;
+
+}
+.info-wrapper ul{
+margin-top: 50px;
+
+}
+
+.info-wrapper {
+	width: 200px;
+	height: 200px;
+	float: right;
+	text-align: left;
+	
+	
+	font-size: 14px;
+	
+}
+.info-wrapper li{
+margin-bottom: 7px;
+}
+.info-wrapper b{
+	font-size: 16px;
+	
+}
+
+#myinfo-update {
+	width: 500px;
+	height: 350px;
+	margin: 0 auto;
+	box-shadow:0px 0px 5px #BDBDBD;
+	font-size: 15px;
+	border-radius: 10px;
+}
+
+#myinfo-update span {
+	margin-right: 250px;
+	font-size: 13px;
+}
+
+#myinfo-update div {
+	margin-bottom: 10px;
+}
+
+#update-button button {
+	background-color: #BDBDBD;
+	width: 80px;
+	border-radius: 10px;
+	border: none;
+	height: 25px;
+	font-size: 10px;
+	color: white;
+}
+#update-button button:hover{
+	background-color: white;
+	color: #BDBDBD;
+	border: 1px solid #BDBDBD;
+}
+
+#myinfo-update input {
+	width: 300px;
+	height: 45px;
+	border-radius: 10px;
+	border: 1px solid #BDBDBD;
+	margin-bottom: 4px;
+	margin-top: 4px;
+	font-size: 13px;
+}
+
+#myinfo-update input:focus {
+	outline: none;
+}
+
+.profile-management {
+	display: none;
+}
+input[type="file"]+label:hover{
+background-color: white;
+	color: #BDBDBD;
+	border: 1px solid #BDBDBD;
+}
+
+.update-content {
+	margin-top: 13px;
+	
+}
+.update-content b{
+	font-size: 13px;
+	
+}
+
+
+input[type="file"]+label {
+	background-color: #6E6E6E;
+	width: 80px;
+	border-radius: 10px;
+	border: none;
+	height: 25px;
+	font-size: 10px;
+	color: white;
+	cursor: pointer;
+	text-align: center;
+	line-height: 21px;
+	align-items: center;
+	justify-content: center;
+	margin-left: 15px;
+}
+
+/* input[type="file"]+label:hover {
+	background-color: #fff;
+	color: #747f55;
+	border: 1px solid #747f55;
+}
+ */
+ 
+#member-del{
+	background-color: #BDBDBD;
+	width: 80px;
+	border-radius: 10px;
+	border: none;
+	height: 25px;
+	font-size: 10px;
+	color: white;
+	float: right;
+	margin-top: 2px;
+	margin-right: 2px;
+	
+}
+#member-del:hover {
+	background-color: white;
+	color: #BDBDBD;
+	border: 1px solid #BDBDBD;
+}
+.nicknameok{
+	margin-left:100px;
+	font-size: 3px;
+	color: #6E6E6E;
+	width: 300px;
+
+}
+</style>
+<script type="text/javascript">
+	$(function () {
+		
+		$("#member-del").click(function () {
+			if (confirm("회원탈퇴 하시겠습니까?")) {
+		        // (예) 버튼 클릭 시 이벤트
+		        
+		        $.ajax({
+
+					type : "get",
+					url : "memberdelete",
+					dataType : "html",
+					data : {
+						"member_num" : ${member_num}
+					},
+					success : function() {
+						location.href = "/";
+						
+
+						
+				
+						
+					}
+				});
+		        
+				
+		    } else {
+		        // (취소) 버튼 클릭 시 이벤트
+		    	location.reload();
+		    	
+		    };	
+						
+			
+		})
+		
+	})
+	
+	 $(document).ready(function() {
+		 
+		
+	  // 폼 제출 이벤트 핸들러 함수
+	  $("#updateprofile").submit(function(event) {
+	    // 이메일 중복 체크 결과가 0이 아니면 폼 제출 방지
+	    if ($("span.nicknameok").data("nickcount") !== 0) {
+	    	event.preventDefault();
+		      alert("닉네임을 다시 입력해주세요");
+	  
+	    	
+	    }else if(!validatePassword()){
+	    	  event.preventDefault();
+	    	    alert("비밀번호는 8자리 이상 16자리 이하이며, 영어 대소문자와 숫자, 특수문자가 모두 포함되어야 합니다.");
+	      }else{
+	    	  alert("수정이 완료 되었습니다");
+	      }
+});
+	  
+	  
+	  //닉네임 중복 체크 함수
+	  function membernicknamecheck() {
+		  var member_nickname = $("#member_nickname").val();
+		  var member_num = $("member_num").val();
+		  console.log("member_num:"+member_num)
+		  $.ajax({
+			  type:"get",
+			  dataType:"json",
+			  url:"memberupdatenicknamecheck",
+			  data:{"member_nickname": member_nickname,
+				  	"member_num" : member_num},
+			  success:function(res){
+				  var nickmessage=res.unickcount==0?"사용 가능한 닉네임 입니다.":"사용 불가능한 닉네임 입니다.";
+				  $("span.nicknameok").text(nickmessage).data("unickcount",res.nickcount);
+				  if(member_nickname==""){
+					  $("span.nicknameok").text("닉네임 중복 확인을 해주세요.")
+				  }
+			  }
+			  
+		  });
+		
+	};
+	  
+	  
+	  
+	  // 닉네임 중복 체크 이벤트 핸들러 함수 등록
+	  $("#member_nickname").on("keydown blur",membernicknamecheck);
+	  
+	  // 닉네임 입력란 클릭 시 닉네임 중복 체크 결과 조회
+	  $("#member_nickname").click(function(){
+		  $("span.nicknameok").text("").data("nickcount",0);
+	  });
+	   
+	});
+	
+	
+	
+	function validatePassword() {
+		  var password = document.getElementById("member_pass").value;
+		  var passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,16}$/;
+		  return passwordPattern.test(password);
+	}
+	
+
+</script>
+</head>
+
+<body>
+	<c:set var="loginok" value="${sessionScope.loginok}"></c:set>
+	<form action="updateprofile" method="post"
+		enctype="multipart/form-data" id="updateprofile">
+		<input type="hidden" name="member_num" value="${member_num}">
+		<div class="myinfo-wrapper">
+
+			<b>프로필 관리</b> <br> <br><br>
+			
+			<div class="profile-info">
+				
+				<div class="info-wrapper">
+				<button type="button" id="member-del">회원 탈퇴</button> 
+					<ul>
+						 <li><b>성명</b><br> ${dto.member_name}</li>
+						 
+						<li><b>이메일</b><br>${dto.member_email}</li>
+						
+					</ul>
+											
+					
+				</div>
+				<div class="image-wrapper">
+					<c:if test="${dto.member_photo==null }">
+						<img src="../image/logoimage.png" id="profile-img">
+					</c:if>
+					<c:if test="${dto.member_photo!=null }">
+						<img alt="" src="../../photo/${dto.member_photo}" id="profile-img">
+					</c:if>
+					<br>
+					<input type="file" class="profile-management"
+						id="profile-management" name="upload" onchange="readURL(this);"
+						style="display: none;"><label for="profile-management">사진
+						변경</label>
+
+				</div>
+
+
+
+			</div>
+			<div id="myinfo-update">
+				<div class="update-content">
+				<br>
+					<div>
+						<span><b>닉네임</b></span> <br> <input type="text"
+							name="member_nickname" value="${dto.member_nickname}" id="member_nickname" autocomplete='off'>
+							<br>
+					<span class="nicknameok" style="margin-left:60px;font-size: 9px;color: #6E6E6E;width: 300px;"></span>		
+					</div>
+					
+					<div>
+						<span><b>비밀번호</b></span><br> <input type="text"
+							name="member_pass" value="${dto.member_pass}" id="member_pass" autocomplete='off'>
+					</div>
+					<div>
+						<span><b>연락처</b></span><br> <input type="text" maxlength="11" autocomplete='off'
+							 oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+							name="member_hp" value="${dto.member_hp}">
+					</div>
+					
+
+				</div>
+
+					<div id="update-button">
+						<button type="button" class="page-back">이전</button>
+						<button type="submit" class="profile-update">수정하기</button>
+					</div>
+			</div>
+
+
+
+		</div>
+	</form>
+	<script type="text/javascript">
+		$(function() {
+			$("#profile-management").click(function() {
+				$("#photo-view").trigger("click");
+			})
+		})
+
+		function readURL(input) {
+			if (input.files && input.files[0]) {
+				var reader = new FileReader();
+				reader.onload = function(e) {
+
+					$("#profile-img").attr("src", e.target.result);
+
+				}
+				reader.readAsDataURL(input.files[0]);
+			}
+		};
+
+		$(".page-back").click(function() {
+			history.back();
+		});
+
+		/* $(".profile-update").click(function() {
+			alert("수정하시겠습니까?");
+
+		});
+		 */
+		
+	</script>
+</body>
+</html>

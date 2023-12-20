@@ -1,0 +1,13 @@
+package boot.data.diggingplace;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class DiggingPlaceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(DiggingPlaceApplication.class, args);
+	}
+
+}
