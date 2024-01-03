@@ -34,7 +34,7 @@
 	width: 600px;
 	height: 150px;
 	margin: 0 auto;
-	margin-bottom: 30px;
+
 }
 
 #allmyinfo {
@@ -266,6 +266,7 @@ input[type=checkbox] {
 	width: 60px;
 	height: 25px;
 	font-size: 10px;
+	
 }
 
 #btnlikepopupdelete:hover {
@@ -316,9 +317,9 @@ color: #5d6361;font-size: 10px;outline: none;text-decoration: underline;
 	color: white;
 	 background-color: white;
 	float: left;
-	line-height: 35px;
+	line-height: 45px;
 	vertical-align: middle;
- border: 1px solid #bdbdbd;
+
 
 	
 	
@@ -406,7 +407,7 @@ color: #5d6361;font-size: 10px;outline: none;text-decoration: underline;
 		<div class="myinfo-wrapper">
 			<input type="hidden" name="member_num" value="${member_num}">
 			<c:set var="loginok" value="${sessionScope.loginok}"></c:set>
-			<br> <b>마이 페이지</b> <br> <br> <br>
+			<br> <b>마이 페이지</b> <br> 
 			<div class="allmyinfo">
 
 
@@ -434,17 +435,18 @@ color: #5d6361;font-size: 10px;outline: none;text-decoration: underline;
 						</c:if>
 					</div>
 				</div>
-		<br>
+		
 				<nav id="membermenu">
 					<ul>
 						<li><a href="myinfo" class="menus" >전 시(${totalCount})</a></li>
-						<li><a href="memberpopup" class="menus" style="background-color: #bdbdbd; color: white;">팝업 스토어(${totalCounts})</a></li>
+						<li><a href="memberpopup" class="menus" style="background-color: #bdbdbd; color: white;
+						box-shadow: 0px 0px 5px #BDBDBD; border-radius: 10px;">팝업 스토어(${totalCounts})</a></li>
 						<li><a href="memberreview" class="menus">후 기(${rtotalCounts})</a></li>
 					</ul>
 				</nav>
 
 
-				<br>
+			
 				
 				
 				

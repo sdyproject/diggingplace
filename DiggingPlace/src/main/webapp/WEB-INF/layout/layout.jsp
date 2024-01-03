@@ -37,7 +37,7 @@ div.layout div.header {
 	
 	position: absolute;
       width:100%;
-      height: 20%;
+      height: 18%;
       
       box-shadow:0px 0px 15px #BDBDBD;
 }

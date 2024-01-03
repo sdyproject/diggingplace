@@ -30,7 +30,7 @@
 	height: 750px;
 	margin: 0 auto;
 	text-align: center;
-	margin-top: 50px;
+	margin-top: 30px;
 }
 
 /* #profile-management {
@@ -323,7 +323,7 @@ input[type="file"]+label {
 		<input type="hidden" name="member_num" value="${member_num}" id="member_num">
 		<div class="myinfo-wrapper">
 
-			<b>프로필 관리</b> <br> <br><br>
+			<b>프로필 관리</b> <br><br>
 			
 			<div class="profile-info">
 				

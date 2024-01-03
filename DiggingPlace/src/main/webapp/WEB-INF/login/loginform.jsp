@@ -22,7 +22,7 @@ border-radius: 10px;
 width: 450px; height: 400px; 
 text-align: center;
 box-shadow:0px 0px 5px #BDBDBD;
-margin-top: 70px;
+margin-top: 30px;
 }
 .gaip{
 background-color: #6E6E6E;

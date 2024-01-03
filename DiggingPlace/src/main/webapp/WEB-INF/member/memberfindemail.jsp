@@ -173,7 +173,7 @@ background-color: white;
         
        
     </script>
-<body>
+<body> 
 <div id="find-wrapper">
 <br><br>
 				<b>이메일 찾기</b> <br> <br>

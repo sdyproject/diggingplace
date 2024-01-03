@@ -39,7 +39,7 @@ margin-top: 5px;
 border:none;
 background-color: white;
   width :90px;
-  height: 100px;
+  height: 80px;
   cursor : pointer;
   margin: 0 auto;
   margin-top: 5px;
@@ -85,7 +85,7 @@ filter: opacity(0.2) drop-shadow(0 0 0 #BDBDBD);
 
 <div class="logo">
 <a href="/">
- <img alt="logo"  src="../../image/logoimage.png" style="width:160px; height: 100px; margin-top: 10px;">
+ <img alt="logo"  src="../../image/logoimage.png" style="width:160px; height: 80px; margin-top: 10px;">
  </a>
  </div>
  

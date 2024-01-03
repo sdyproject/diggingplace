@@ -28,7 +28,7 @@
 	width: 100%;
 	height: 1300px;
 	text-align: center;
-	margin-top: 70px;
+	margin-top: 30px;
 }
 
 .popupbox {

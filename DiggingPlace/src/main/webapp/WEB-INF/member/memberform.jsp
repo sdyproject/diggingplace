@@ -24,7 +24,7 @@
 	width: 400px;
 	height: 880px;
 	text-align: center;
-	margin-top: 80px;
+	margin-top: 30px;
 	box-shadow: 0px 0px 5px #BDBDBD;
 }
 

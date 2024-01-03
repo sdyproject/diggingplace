@@ -28,7 +28,7 @@
 	width: 100%;
 	height: 1300px;
 	text-align: center;
-	margin-top: 70px;
+	margin-top: 30px;
 }
 
 .exhibitionbox {
@@ -315,11 +315,7 @@ $(function(){
 
 	<div class="allexhibition">
 		<div style="text-align: center;">
-			<c:choose>
-			<c:when test="">
 			
-			</c:when>
-			</c:choose>
 			<b >전시회 </b>
 		</div>
 		<br><br>

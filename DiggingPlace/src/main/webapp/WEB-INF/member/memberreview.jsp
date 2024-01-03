@@ -34,7 +34,7 @@
 	width: 600px;
 	height: 150px;
 	margin: 0 auto;
-	margin-bottom: 30px;
+
 }
 
 #allmyinfo {
@@ -303,7 +303,7 @@ color: black; font-size: 10px;outline: none;text-decoration: underline;
 color: #5d6361;font-size: 10px;outline: none;text-decoration: underline;
 }
 #membermenu {
-	width: 900px;
+	width: 720px;
 
 	
 }
@@ -313,9 +313,9 @@ color: #5d6361;font-size: 10px;outline: none;text-decoration: underline;
 	color: white;
 	 background-color: white;
 	float: left;
-	line-height: 35px;
+	line-height: 45px;
 	vertical-align: middle;
- border: 1px solid #bdbdbd;
+
 
 	
 	
@@ -406,7 +406,7 @@ color: #5d6361;font-size: 10px;outline: none;text-decoration: underline;
 		<div class="myinfo-wrapper">
 			<input type="hidden" name="member_num" value="${member_num}">
 			<c:set var="loginok" value="${sessionScope.loginok}"></c:set>
-			<br> <b>마이 페이지</b> <br> <br> <br>
+			<br> <b>마이 페이지</b> 
 			<div class="allmyinfo">
 
 
@@ -435,17 +435,18 @@ color: #5d6361;font-size: 10px;outline: none;text-decoration: underline;
 						</c:if>
 					</div>
 				</div>
-<br>
+
 				<nav id="membermenu">
 					<ul>
 						<li><a href="myinfo" class="menus" >전 시(${totalCount})</a></li>
 						<li><a href="memberpopup" class="menus" >팝업 스토어(${totalCounts})</a></li>
-						<li><a href="memberreview" class="menus" style="background-color: #bdbdbd; color: white;">후 기(${rtotalCounts})</a></li>
+						<li><a href="memberreview" class="menus" style="background-color: #bdbdbd; color: white;
+						box-shadow: 0px 0px 5px #BDBDBD; border-radius: 10px;">후 기(${rtotalCounts})</a></li>
 					</ul>
 				</nav>
 
 
-				<br>
+			
 		<div id="reviewdata">
 				
 				<div id="review-content">
