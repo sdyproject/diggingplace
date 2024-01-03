@@ -381,7 +381,7 @@ input[type=checkbox] {
 			//alert(cnt);
 
 			if (cnt == 0) {
-				alert("삭제하실 전시회를 선택해 주세요.");
+				alert("취소하실 전시회를 선택해 주세요.");
 				return;
 			}
 
@@ -482,7 +482,7 @@ input[type=checkbox] {
 
 							<b style="font-size: 10px;">전체 선택:</b> <input type="checkbox"
 								id="allcheck" style="height: 10px;"><br>
-							<button type="button" id="btnlikeexhitiondelete">삭 제</button>
+							<button type="button" id="btnlikeexhitiondelete">취 소</button>
 						</div>
 					</div>
 						

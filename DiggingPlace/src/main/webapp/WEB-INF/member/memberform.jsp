@@ -87,9 +87,10 @@ input[type=radio] {
 	border-radius: 10px;
 	border: 1px solid #BDBDBD;
 	height: 40px;
-	font-size: 15px;
+	font-size: 13px;
 	color: white;
 	margin-bottom: 5px;
+	box-shadow: 0px 0px 5px #BDBDBD; 
 }
 .gaipbtn:hover {
 	background-color: white;
@@ -198,7 +199,7 @@ input::placeholder {
 					placeholder="Birthday" required="required" >
 					<br>
 
-				<button type="submit" class="gaipbtn">가입</button>
+				<button type="submit" class="gaipbtn">회원 가입</button>
 
 
 

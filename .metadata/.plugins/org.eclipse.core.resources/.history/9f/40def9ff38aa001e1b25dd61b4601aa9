@@ -29,16 +29,18 @@
 	margin: 0 auto;
 	text-align: center;
 }
+
 .profile-info {
 	width: 600px;
 	height: 150px;
 	margin: 0 auto;
-	margin-bottom: 30px;
+
 }
 
 #allmyinfo {
 	width: 600px;
 	margin: 0 auto;
+	
 }
 
 .image-wrapper {
@@ -71,9 +73,7 @@
 
 .info-wrapper li a {
 	color: #6E6E6E;
-
 }
-
 
 ul, li {
 	margin: 0;
@@ -91,6 +91,7 @@ ul, li {
 	height: 25px;
 	font-size: 10px;
 	color: white;
+	box-shadow: 0px 0px 5px #BDBDBD;
 }
 
 .like-exhibition {
@@ -125,7 +126,9 @@ ul, li {
 	font-size: 8px;
 	text-align: left;
 	border: 1px solid #BDBDBD;
-	box-shadow: 0px 0px 5px #BDBDBD;
+	box-shadow: 0px 0px 5px #BDBDBD; 
+	
+	
 }
 
 .p .exhibition_Subject {
@@ -180,7 +183,7 @@ input[type=checkbox] {
 	box-shadow: 0px 0px 5px #BDBDBD;
 	border-radius: 10px;
 	width: 710px;
-	margin-top: 40px;
+	margin-top: 60px;
 	height: 380px;
 }
 
@@ -197,6 +200,7 @@ input[type=checkbox] {
 	display: inline-flex;
 	margin-right: 1px; /*아이템별 간격  */
 	margin-left: 10px;
+	
 }
 
 .like-popup img {
@@ -206,6 +210,10 @@ input[type=checkbox] {
 .like-popup img:hover {
 	filter: opacity(0.4);
 }
+
+
+
+
 
 .p .popup_Subject {
 	overflow: hidden;
@@ -232,6 +240,7 @@ input[type=checkbox] {
 	width: 60px;
 	height: 25px;
 	font-size: 10px;
+	box-shadow: 0px 0px 5px #BDBDBD;
 }
 
 #btnlikepopupdelete:hover {
@@ -248,8 +257,9 @@ input[type=checkbox] {
 	background-color: white;
 	color: #BDBDBD;
 	border: 1px solid #BDBDBD;
+
 }
-/*후기 css  */
+	/*후기 css  */
 #btnreviewdelete {
 	background-color: #BDBDBD;
 	border-radius: 10px;
@@ -258,6 +268,7 @@ input[type=checkbox] {
 	width: 60px;
 	height: 25px;
 	font-size: 10px;
+	
 }
 
 #btnlikepopupdelete:hover {
@@ -276,7 +287,6 @@ input[type=checkbox] {
 	border: 1px solid #BDBDBD;
 	box-shadow: 0px 0px 5px #BDBDBD;
 }
-
 #review-content {
 	box-shadow: 0px 0px 5px #BDBDBD;
 	border-radius: 10px;
@@ -284,37 +294,26 @@ input[type=checkbox] {
 	margin-top: 10px;
 	height: 320px;
 }
-
 .reviews {
 	width: 200px;
 	height: 180px;
 	position: relative;
 	font-size: 11px;
+	
 	border-radius: 10px;
+	
 	text-align: center;
-	color: black;
+color: black;
 }
-
-.movedetailpage a {
-	color: black;
-	font-size: 10px;
-	outline: none;
-	text-decoration: underline;
+.movedetailpage a{
+color: black; font-size: 10px;outline: none;text-decoration: underline;
 }
-
-.movedetailpage a:hover {
-	color: #5d6361;
-	font-size: 10px;
-	outline: none;
-	text-decoration: underline;
+.movedetailpage a:hover{
+color: #5d6361;font-size: 10px;outline: none;text-decoration: underline;
 }
-
 #membermenu {
 	width: 900px;
-
-	
 }
-
 #membermenu ul li {
 	list-style: none;
 	color: white;
@@ -322,7 +321,7 @@ input[type=checkbox] {
 	float: left;
 	line-height: 45px;
 	vertical-align: middle;
- border: 1px solid #bdbdbd;
+
 
 	
 	
@@ -342,20 +341,16 @@ input[type=checkbox] {
 }
 
 
+
+
+
 </style>
 <script type="text/javascript">
 
 
-
-
-
-
-
-
-
 	$(function() {
 		//전체 선택하면 체크 박스 전체 선택 
-		$("#allcheck").click(function() {
+		$("#allpopupcheck").click(function() {
 
 			//체크겂 얻기
 			var chk = $(this).is(":checked");
@@ -364,38 +359,34 @@ input[type=checkbox] {
 			//전체체크값을 아래의 체크에 일괄전달
 			//prop :전달
 
-			$(".del").prop("checked", chk)
+			$(".popupdel").prop("checked", chk)
 
 		});
 
-		$("#btnlikeexhitiondelete").click(function() {
+		$("#btnlikepopupdelete").click(function() {
 
-			var cnt = $(".del:checked").length;
+			var cnt = $(".popupdel:checked").length;
 			//alert(cnt);
 
 			if (cnt == 0) {
-				alert("삭제하실 전시회를 선택해 주세요.");
+				alert("삭제하실 팝업 스토어를 선택해 주세요.");
 				return;
 			}
 
-			$(".del:checked").each(function(i, elt) {
+			$(".popupdel:checked").each(function(i, elt) {
 				//선택한 멤버의 num만 나오는지 확인 
-				var num = $(this).attr("num");
-				console.log(num);
-				if (num>1) {
-					
-				} else {
-
-				}
+				var popupnum = $(this).attr("popupnum");
+				console.log(popupnum);
+				
 
 				//삭제 ajax
 				$.ajax({
 
 					type : "get",
-					url : "/exhibition/mylikedelete",
+					url : "/popup/mylikedelete",
 					dataType : "html",
 					data : {
-						"exhibition_num" : num
+						"popup_num" : popupnum
 					},
 					success : function() {
 						alert("'좋아요' 취소 되었습니다");
@@ -407,9 +398,6 @@ input[type=checkbox] {
 
 	});
 
-
-	
-	
 	
 	
 </script>
@@ -417,12 +405,11 @@ input[type=checkbox] {
 
 </head>
 <body>
-
 	
 		<div class="myinfo-wrapper">
 			<input type="hidden" name="member_num" value="${member_num}">
 			<c:set var="loginok" value="${sessionScope.loginok}"></c:set>
-			<br> <b>마이 페이지</b> <br> <br> <br>
+			<br> <b>마이 페이지</b> <br> 
 			<div class="allmyinfo">
 
 
@@ -431,7 +418,7 @@ input[type=checkbox] {
 					<div class="info-wrapper">
 						<ul>
 							<li style="font-size: 15px;">${dto.member_name}</li>
-							<li style="font-size: 10px;">마음에 드는 전시를 놓치지 마세요.</li>
+							<li style="font-size: 10px;">마음에 드는 팝업 스토어를 놓치지 마세요.</li>
 						</ul>
 
 						<button type="button" id="profile-management"
@@ -450,108 +437,124 @@ input[type=checkbox] {
 						</c:if>
 					</div>
 				</div>
-			
-
+		
 				<nav id="membermenu">
 					<ul>
-						<li><a href="myinfo" class="menus" style="background-color: #bdbdbd; color: white;">전 시(${totalCount})</a></li>
-						<li><a href="memberpopup" class="menus">팝업 스토어(${totalCounts})</a></li>
+						<li><a href="myinfo" class="menus" >전 시(${totalCount})</a></li>
+						<li><a href="memberpopup" class="menus" style="background-color: #bdbdbd; color: white;
+						box-shadow: 0px 0px 5px #BDBDBD; border-radius: 10px;">팝업 스토어(${totalCounts})</a></li>
 						<li><a href="memberreview" class="menus">후 기(${rtotalCounts})</a></li>
 					</ul>
 				</nav>
 
 
-		
 			
-
-				<div id="exhibitiondata">
-					
-					<div id="like-content">
-						
-						<div id="exhibition">
-						
-						<div style="width: 700px; text-align: right;">
-
-							<b style="font-size: 10px;">전체 선택:</b> <input type="checkbox"
-								id="allcheck" style="height: 10px;"><br>
-							<button type="button" id="btnlikeexhitiondelete">삭 제</button>
-						</div>
-					</div>
-						
-						<c:if test="${totalCount==0}">
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<div style="width: 200px; margin: 0 auto;">
-								<b style="font-size: 14px; color: #5d6361;">선택한 전시회가 없습니다.</b>
-							</div>
-						</c:if>
-						<c:forEach var="e" items="${list}" varStatus="i">
-
-							<div class="like-exhibition">
-								<div class="pho">
-
-									<input type="checkbox" class="del" num=${e.exhibition_num }
-										style="float: right; height: 15px; position: relative; z-index: 1; top: 15px;">
+				
+				
+				
 
 
+				
+				
+				<div id="popupdata">
+				
+				<div id="like-content">
+				
+				<div id="popup">
+			
+					<div style="width: 700px; text-align: right;">
 
-									<input type="hidden" name="exhibition_num"
-										value="${e.exhibition_num}"> <img
-										src="${e.exhibition_image}"
-										onclick="location.href='exhibition/exhibitiondetail/${e.exhibition_num}'"
-										style="width: 200px; height: 180px; cursor: pointer;"> <br>
-									<div class="p">
-										<b class="exhibition_Subject"
-											onclick="location.href='exhibition/exhibitiondetail/${e.exhibition_num}'">
-											${e.exhibition_subject }</b><br> <b>${e.exhibition_location }</b><span
-											class='v-line'><b> ${e.exhibition_price }</b></span>
-
-
-
-
-
-
-
-									</div>
-									<br>
-								</div>
-
-							</div>
-						</c:forEach>
-						<c:if test="${totalCount>0 }">
-							<div style="width: 700px; text-align: center;">
-								<ul class="pagination">
-									<!-- 이전 -->
-									<c:if test="${startPage>1 }">
-										<li><a href="myinfo?currentPage=${startPage-1 }">이전</a></li>
-									</c:if>
-
-									<c:forEach var="pp" begin="${startPage }" end="${endPage }">
-										<c:if test="${currentPage==pp }">
-											<li class="active"><a href="myinfo?currentPage=${pp }"
-												style="cursor: pointer; background-color: #BDBDBD; border-color: #BDBDBD;">${pp }</a>
-											</li>
-										</c:if>
-
-										<c:if test="${currentPage!=pp }">
-											<li><a href="myinfo?currentPage=${pp }"
-												style="color: black;">${pp }</a></li>
-										</c:if>
-
-									</c:forEach>
-
-									<!-- 다음 -->
-									<c:if test="${endPage<totalPage }">
-										<li><a href="myinfo?currentPage=${endPage+1 }">다음</a></li>
-									</c:if>
-								</ul>
-							</div>
-						</c:if>
+						<b style="font-size: 10px;">전체 선택:</b> <input type="checkbox"
+							id="allpopupcheck" style="height: 10px;"><br>
+						<button type="button" id="btnlikepopupdelete">삭 제</button>
 					</div>
 				</div>
+				<c:if test="${totalCounts==0}">
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<div style="width: 200px; margin: 0 auto;">
+					<b style="font-size: 14px; color: #5d6361;">선택한 팝업 스토어가 없습니다.</b>
+				</div>
+				</c:if>
+					<c:forEach var="e" items="${plist}" varStatus="i">
+
+						<div class="like-popup">
+							<div class="pho">
+
+								<input type="checkbox" class="popupdel" popupnum=${e.popup_num }
+									style="float: right; height: 15px; position: relative; z-index: 1; top: 15px;">
+
+
+
+								<input type="hidden" name="popup_num" value="${e.popup_num}">
+								<c:if test="${e.popup_image!=null}">
+									<img src="${e.popup_image}"
+										onclick="location.href='popup/popupdetail/${e.popup_num}'"
+										style="width: 200px; height: 180px; cursor: pointer;">
+								</c:if>
+								<c:if test="${e.popup_image==null}">
+									<img src="../image/logoimage.png"
+										onclick="location.href='popup/popupdetail/${e.popup_num}'"
+										style="width: 200px; height: 180px; cursor: pointer;">
+								</c:if>
+								<br>
+								<div class="p">
+									<b class="popup_Subject"
+										onclick="location.href='popup/popupdetail/${e.popup_num}'">
+										${e.popup_subject }</b><br> <b>${e.popup_location }</b>
+								</div>
+								<br>
+							</div>
+
+						</div>
+					</c:forEach>
+					<c:if test="${totalCounts>0 }">
+						<div style="width: 700px; text-align: center;">
+							<ul class="pagination">
+								<!-- 이전 -->
+								<c:if test="${pstartPage>1 }">
+									<li><a href="memberpopup?currentPage=${pstartPage-1 }">이전</a></li>
+								</c:if>
+
+								<c:forEach var="pp" begin="${pstartPage }" end="${pendPage }">
+									<c:if test="${pcurrentPage==pp}">
+										<li class="active"><a href="memberpopup?currentPage=${pp }"
+											style="cursor: pointer; background-color: #BDBDBD; border-color: #BDBDBD;">${pp }</a>
+										</li>
+									</c:if>
+
+									<c:if test="${pcurrentPage!=pp }">
+										<li><a href="memberpopup?pcurrentPage=${pp }"
+											style="color: black;">${pp }</a></li>
+									</c:if>
+
+								</c:forEach>
+
+								<!-- 다음 -->
+								<c:if test="${pendPage<ptotalPage }">
+									<li><a href="memberpopup?pcurrentPage=${pendPage+1 }">다음</a></li>
+								</c:if>
+							</ul>
+						</div>
+					</c:if>
+				</div>
+		</div>
+				<br>
+				
+				
+				
+				
+				
+			
+	
+
+
+
+
+
 
 
 
@@ -560,7 +563,7 @@ input[type=checkbox] {
 			</div>
 
 		</div>
-
+	
 
 
 

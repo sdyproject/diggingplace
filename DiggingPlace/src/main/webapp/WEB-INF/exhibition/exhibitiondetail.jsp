@@ -178,6 +178,7 @@ scale
 	height: 40px;
 	font-size: 10px;
 	color: white;
+	box-shadow: 0px 0px 5px #BDBDBD; 
 }
 
 .writebtn button:hover {
@@ -233,6 +234,7 @@ scale
 	outline: none;
 	margin-right: 165px;
 	text-decoration: underline;
+	cursor: pointer;
 }
 
 #nototalreviewlist {
@@ -362,6 +364,9 @@ resize: none;
 }
 .form-group {
 	text-align: center;
+}
+.lists a {
+cursor: pointer;
 }
 
 </style>
@@ -685,7 +690,7 @@ map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 			style="font-size: 14px;"> ★${avgscore} ${noreview } </b>
 
 		<hr>
-		<div>
+		<div class="lists">
 			<c:if test="${noreview==0}">
 				<a id="nototalreviewlist">전체보기</a>
 			</c:if>
@@ -918,16 +923,7 @@ map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
    });   
   
- /*  function numberMaxLength(e){
-
-      if(e.value.length > e.maxLength){
-
-          e.value = e.value.slice(0, e.maxLength);
-
-      }
-
-  } */
-  
+ 
   
    
   </script>

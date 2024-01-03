@@ -91,6 +91,7 @@ ul, li {
 	height: 25px;
 	font-size: 10px;
 	color: white;
+	box-shadow: 0px 0px 5px #BDBDBD;
 }
 
 
@@ -233,6 +234,7 @@ input[type=checkbox] {
 	width: 60px;
 	height: 25px;
 	font-size: 10px;
+	box-shadow: 0px 0px 5px #BDBDBD;
 }
 
 #btnlikepopupdelete:hover {
@@ -260,6 +262,7 @@ input[type=checkbox] {
 	width: 60px;
 	height: 25px;
 	font-size: 10px;
+	box-shadow: 0px 0px 5px #BDBDBD;
 }
 
 #btnlikepopupdelete:hover {

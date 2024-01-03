@@ -42,7 +42,7 @@ background-color: #BDBDBD;
 width: 300px; border-radius: 10px; 
  border: none;  height: 45px; font-size: 15px;
 color: white; margin-bottom: 5px;
-
+box-shadow: 0px 0px 5px #BDBDBD; 
 }
 .mlogin:hover{
 background-color: white;

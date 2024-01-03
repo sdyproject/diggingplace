@@ -91,6 +91,7 @@ ul, li {
 	height: 25px;
 	font-size: 10px;
 	color: white;
+	box-shadow: 0px 0px 5px #BDBDBD;
 }
 
 .like-exhibition {
@@ -239,6 +240,7 @@ input[type=checkbox] {
 	width: 60px;
 	height: 25px;
 	font-size: 10px;
+	box-shadow: 0px 0px 5px #BDBDBD;
 }
 
 #btnlikepopupdelete:hover {
@@ -367,7 +369,7 @@ color: #5d6361;font-size: 10px;outline: none;text-decoration: underline;
 			//alert(cnt);
 
 			if (cnt == 0) {
-				alert("삭제하실 팝업 스토어를 선택해 주세요.");
+				alert("취소하실 팝업 스토어를 선택해 주세요.");
 				return;
 			}
 
@@ -464,7 +466,7 @@ color: #5d6361;font-size: 10px;outline: none;text-decoration: underline;
 
 						<b style="font-size: 10px;">전체 선택:</b> <input type="checkbox"
 							id="allpopupcheck" style="height: 10px;"><br>
-						<button type="button" id="btnlikepopupdelete">삭 제</button>
+						<button type="button" id="btnlikepopupdelete">취 소</button>
 					</div>
 				</div>
 				<c:if test="${totalCounts==0}">

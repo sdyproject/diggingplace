@@ -6,23 +6,23 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="profile-img"/>
+		<item key="selection" value="profile-management"/>
 		<list key="findhistory">
-			<item value="profile-img"/>
 			<item value="profile-management"/>
-			<item value="btnlikeexhitiondelete"/>
 			<item value="btnreviewdelete"/>
-			<item value="profile-info"/>
-			<item value="menus"/>
-			<item value="membermenu"/>
-			<item value="myinfo-wrapper"/>
-			<item value="info-wrapper"/>
-			<item value="like-content"/>
-			<item value="allpopup"/>
-			<item value="review-warpper"/>
-			<item value="allexhibition"/>
-			<item value="mform"/>
-			<item value="login-wrapper"/>
+			<item value="btnlikepopupdelete"/>
+			<item value="삭 제"/>
+			<item value="삭제"/>
+			<item value="totalreviewlist"/>
+			<item value="reviewwrite"/>
+			<item value="writebtn"/>
+			<item value="후기작성"/>
+			<item value="submitBtn"/>
+			<item value="locationreset"/>
+			<item value="초기화"/>
+			<item value="후기 작성"/>
+			<item value="검색"/>
+			<item value="gaipbtn"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>

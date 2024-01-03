@@ -124,7 +124,7 @@ color: black;
 	height: 25px;
 	font-size: 10px;
 	color: white;
-	
+	box-shadow: 0px 0px 5px #BDBDBD; 
 }
 
 #submitBtn:hover {
@@ -139,7 +139,7 @@ color: black;
 	background-color: #6e6e6e;
 	border-radius: 5px;
 	border: none;
-	
+	box-shadow: 0px 0px 5px #BDBDBD; 
 	width: 65px;
 	height: 25px;
 	font-size: 10px;
