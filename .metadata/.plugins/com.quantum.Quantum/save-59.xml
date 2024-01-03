@@ -1,0 +1,120 @@
+<?xml version="1.0" ?>
+<SAVED_DATA>
+	<bookmarks>
+		<jdbcDriver className="com.mysql.cj.jdbc.Driver" name="MySQL Connector/J" type="MYSQL" version="mysql-connector-j-8.0.32 (Revision: fa4912a849140828e48162a2c396c8df0091bed7)">
+			<jar fileName="C:\sist1226\util\mysql-connector-j-8.0.32.jar" />
+		</jdbcDriver>
+		<jdbcDriver className="org.apache.derby.jdbc.EmbeddedDriver" name="org.apache.derby.jdbc.EmbeddedDriver" type="DERBY" version="">
+			<jar fileName="C:/sist1226/util/sts-4.18.0.RELEASE/plugins/com.quantum.derby_3.3.10/lib/derby.jar" />
+		</jdbcDriver>
+		<bookmark>
+			<name>(Internal) Derby</name>
+			<username>QUANTUM</username>
+			<password />
+			<prompt>false</prompt>
+			<connect>jdbc:derby:C:/sist1226/util/sts-4.18.0.RELEASE/plugins/com.quantum.derby_3.3.10/data/quantum</connect>
+			<autoCommit>true</autoCommit>
+			<autoCommitPreference>Always True</autoCommitPreference>
+			<autoCommitIgnoreView>false</autoCommitIgnoreView>
+			<quoteAll>false</quoteAll>
+			<sendQueryAsIs>false</sendQueryAsIs>
+			<stripNewline>false</stripNewline>
+			<shutdownOnDisconnect>true</shutdownOnDisconnect>
+			<defaultEncoding />
+			<driver>org.apache.derby.jdbc.EmbeddedDriver</driver>
+			<type>DERBY</type>
+			<substituteVariables>false</substituteVariables>
+			<variablesRegexp>\$\{(.*?)\}</variablesRegexp>
+			<driverLocation>C:/sist1226/util/sts-4.18.0.RELEASE/plugins/com.quantum.derby_3.3.10/lib/derby.jar</driverLocation>
+			<Other_Schemas schemaRule="useAll" />
+			<quickList />
+			<queryList />
+		</bookmark>
+		<bookmark>
+			<name>seo</name>
+			<username>dragon</username>
+			<password>1234</password>
+			<prompt>false</prompt>
+			<connect>jdbc:mysql://localhost:3306/seo?serverTimezone=Asia/Seoul</connect>
+			<autoCommit>true</autoCommit>
+			<autoCommitPreference>Always True</autoCommitPreference>
+			<autoCommitIgnoreView>false</autoCommitIgnoreView>
+			<quoteAll>false</quoteAll>
+			<sendQueryAsIs>false</sendQueryAsIs>
+			<stripNewline>false</stripNewline>
+			<shutdownOnDisconnect>false</shutdownOnDisconnect>
+			<defaultEncoding />
+			<driver>com.mysql.cj.jdbc.Driver</driver>
+			<type>MYSQL</type>
+			<substituteVariables>false</substituteVariables>
+			<variablesRegexp>\$\{(.*?)\}</variablesRegexp>
+			<driverLocation>C:\sist1226\util\mysql-connector-j-8.0.32.jar</driverLocation>
+			<Other_Schemas schemaRule="useSelected">
+				<schema>seo</schema>
+			</Other_Schemas>
+			<quickList />
+			<queryList>
+				<query>
+					<queryString>DELETE FROM review WHERE (review_num = 66)</queryString>
+				</query>
+				<query>
+					<queryString>delete from review where review_num=6</queryString>
+				</query>
+				<query>
+					<queryString>select count(distinct exhibition_num) from review</queryString>
+				</query>
+				<query>
+					<queryString>select count(*) from review</queryString>
+				</query>
+				<query>
+					<queryString>select count(*) from exhibition</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM review WHERE (review_num = 90)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM review WHERE (review_num = 91)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM review WHERE (review_num = 92)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM review WHERE (review_num = 93)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM review WHERE (review_num = 94)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM review WHERE (review_num = 95)</queryString>
+				</query>
+				<query>
+					<queryString>select * from exhibition where exhibition_num=1</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM member WHERE (member_num = 57)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM member WHERE (member_num = 55)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM member WHERE (member_num = 58)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM member WHERE (member_num = 59)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM member WHERE (member_num = 60)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM member WHERE (member_num = 46)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM member WHERE (member_num = 61)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM exhibition_like WHERE (exhibition_like_num = 12)</queryString>
+				</query>
+			</queryList>
+		</bookmark>
+	</bookmarks>
+</SAVED_DATA>

@@ -6,23 +6,23 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="select count(*) from member where member_email=#{member_email}"/>
+		<item key="selection" value="profile-img"/>
 		<list key="findhistory">
-			<item value="select count(*) from member where member_email=#{member_email}"/>
-			<item value="getMemberReview"/>
-			<item value="profile-info"/>
-			<item value="review-content"/>
-			<item value="pho"/>
-			<item value="like-content"/>
-			<item value="membermenu"/>
-			<item value="exhibition"/>
-			<item value="image-wrapper"/>
-			<item value="info-wrapper"/>
-			<item value="profile-management"/>
 			<item value="profile-img"/>
+			<item value="profile-management"/>
+			<item value="btnlikeexhitiondelete"/>
+			<item value="btnreviewdelete"/>
+			<item value="profile-info"/>
+			<item value="menus"/>
+			<item value="membermenu"/>
 			<item value="myinfo-wrapper"/>
-			<item value="&lt;/form&gt;"/>
-			<item value="memberinfo"/>
+			<item value="info-wrapper"/>
+			<item value="like-content"/>
+			<item value="allpopup"/>
+			<item value="review-warpper"/>
+			<item value="allexhibition"/>
+			<item value="mform"/>
+			<item value="login-wrapper"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>
