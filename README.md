@@ -1,2 +1,2 @@
-<img src="https://github.com/sdyproject/diggingplace/assets/126428651/ab82332e-54d5-4abe-ab5a-43cd717f6a51">
+<img src="https://github.com/sdyproject/diggingplace/assets/126428651/9001ef71-b82f-471c-ab37-5fcdce0e11f0">
 
