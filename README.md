@@ -1,4 +1,4 @@
-<h3>Digging place</h3>
+<img src="https://github.com/sdyproject/diggingplace/assets/126428651/ba52afad-ef27-4453-8ef4-ad58cf787b75" >
 <hr> 
 
 
