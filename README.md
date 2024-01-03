@@ -1,4 +1,4 @@
-<img src="https://github.com/sdyproject/diggingplace/assets/126428651/ba52afad-ef27-4453-8ef4-ad58cf787b75"  width="550" height="550">
+<img src="https://github.com/sdyproject/diggingplace/assets/126428651/ba52afad-ef27-4453-8ef4-ad58cf787b75"  width="350" height="250">
 <hr> 
 
 
