@@ -33,9 +33,11 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build Docker
-        run: docker build --platform linux/amd64 -t ${{ secrets.DOCKERHUB_USERNAME }}/live_server .
+        run:  cd DiggingPlace 
+            docker build --platform linux/amd64 -t ${{ secrets.DOCKERHUB_USERNAME }}/digginplace .
       - name: Push Docker
-        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/live_server:latest
+        run:  cd DiggingPlace
+            docker push ${{ secrets.DOCKERHUB_USERNAME }}/digginplace:latest
         
   deploy:
     needs: build
