@@ -1,0 +1,17 @@
+{"properties": [
+  {
+    "name": "server.serverAddress",
+    "type": "java.lang.String",
+    "description": "A description for 'server.serverAddress'"
+  },
+  {
+    "name": "serverName",
+    "type": "java.lang.String",
+    "description": "A description for 'serverName'"
+  },
+  {
+    "name": "server.env",
+    "type": "java.lang.String",
+    "description": "A description for 'server.env'"
+  }
+]}
