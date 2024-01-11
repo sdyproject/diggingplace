@@ -1,6 +1,6 @@
 FROM amazoncorretto:11-alpine-jdk
-ARG JAR_FILE=target/*.jar 
+ARG WAR_FILE=target/*.war 
 ARG PROFILES
 ARG ENV
-COPY ${JAR_FILE} app.jar 
-ENTRYPOINT ["java", "-Dspring.profiles.active=${PROFILES}", "-Dserver.env=${ENV}", "-jar", "app.jar"]
+COPY ${WAR_FILE} app.war 
+ENTRYPOINT ["java", "-Dspring.profiles.active=${PROFILES}", "-Dserver.env=${ENV}", "-war", "app.war"]
