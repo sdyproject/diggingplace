@@ -1,7 +1,7 @@
 name: CICD
 
 on:
-  push: 
+  push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
@@ -25,7 +25,14 @@ jobs:
           cd DiggingPlace
           chmod 777 ./mvnw
           ./mvnw clean package -Dtestskip
-
+      - name: find dockerfile
+        run: docker info | grep Root
+      - name: find jar
+        run: |
+            cd DiggingPlace
+            cd target
+            ls
+        
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
@@ -34,12 +41,10 @@ jobs:
 
       - name: Build Docker
         run: |
-          cd DiggingPlace 
-          docker build --platform linux/amd64 -t ${{ secrets.DOCKERHUB_USERNAME }}/digging .
-      - name: Push Docker
-        run: |
           cd DiggingPlace
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/digging:latest
+          docker build --platform linux/amd64 -t ${{ secrets.DOCKERHUB_USERNAME }}/live_server .
+      - name: Push Docker
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/live_server:latest
         
   deploy:
     needs: build
@@ -76,7 +81,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script_stop: true
           script: |
-            sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/digging:latest
+            sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/live_server:latest
             sudo docker-compose -f docker-compose-${{env.TARGET_UPSTREAM}}.yml up -d
       
       - name: Check deploy server URL
