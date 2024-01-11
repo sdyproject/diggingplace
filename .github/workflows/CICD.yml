@@ -38,7 +38,6 @@ jobs:
       - name: Build Docker
         run: |
           cd DiggingPlace
-          cd /var/lib/docker
           docker build --platform linux/amd64 -t ${{ secrets.DOCKERHUB_USERNAME }}/live_server .
       - name: Push Docker
         run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/live_server:latest
