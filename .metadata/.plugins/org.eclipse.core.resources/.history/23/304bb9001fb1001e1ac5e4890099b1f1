@@ -74,7 +74,12 @@ spring:
       
 
   
-
+##mysql
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/seo?serverTimezone=Asia/Seoul
+#    username: dragon
+#    password: 1234
 #mybatis
 mybatis:
   type-aliases-package: boot.data.dto,boot.data.mapper

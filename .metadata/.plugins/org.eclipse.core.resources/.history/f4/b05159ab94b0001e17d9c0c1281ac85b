@@ -2,9 +2,9 @@ spring:
   profiles:
     active: local
     group:
-      local: local, common, secret
-      blue: blue, common, secret
-      green: green, common, secret
+      local: local, common
+      blue: blue, common
+      green: green, common
 
 server:
   env: blue
@@ -63,18 +63,23 @@ serverName: green_server
   
 #jsp
 spring:
-  mvc:
-    view:
-      prefix: /WEB-INF/
-      suffix: .jsp
+  #mvc:
+    #view:
+      #prefix: /WEB-INF/
+      #suffix: .jsp
       
-#  devtools:
-#    livereload:
-#      enabled: true
+  devtools:
+    livereload:
+      enabled: true
       
 
   
-
+#mysql
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/seo?serverTimezone=Asia/Seoul
+    username: dragon
+    password: 1234
 #mybatis
 mybatis:
   type-aliases-package: boot.data.dto,boot.data.mapper
