@@ -23,6 +23,7 @@ jobs:
       - name: Build with Maven
         run: |
           cd DiggingPlace
+          echo ${{secrets.APPLICATION_SECRET}} | base64 --decode > ./src/main/resources/application-secret.yml
           chmod 777 ./mvnw
           ./mvnw clean package -Dtestskip
       - name: find dockerfile
@@ -42,9 +43,9 @@ jobs:
       - name: Build Docker
         run: |
           cd DiggingPlace
-          docker build --platform linux/amd64 -t ${{ secrets.DOCKERHUB_USERNAME }}/live_server .
+          docker build --platform linux/amd64 -t ${{ secrets.DOCKERHUB_USERNAME }}/digging .
       - name: Push Docker
-        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/live_server:latest
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/digging:latest
         
   deploy:
     needs: build
@@ -63,14 +64,11 @@ jobs:
           if [ $CURRENT_UPSTREAM = blue ]; then
             echo "CURRENT_PORT=8080" >> $GITHUB_ENV
             echo "STOPPED_PORT=8081" >> $GITHUB_ENV
-            echo "TARGET_UPSTREAM=green" >> $GITHUB_ENV
-          elif [ $CURRENT_UPSTREAM = green ]; then
+            echo "TARGET_UPSTREAM=green" >> $GITHUB_EN
+          else
             echo "CURRENT_PORT=8081" >> $GITHUB_ENV
             echo "STOPPED_PORT=8080" >> $GITHUB_ENV
             echo "TARGET_UPSTREAM=blue" >> $GITHUB_ENV
-          else
-            echo "error"
-            exit 1
           fi
           
       - name: Docker compose
@@ -81,7 +79,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script_stop: true
           script: |
-            sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/live_server:latest
+            sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/digging:latest
             sudo docker-compose -f docker-compose-${{env.TARGET_UPSTREAM}}.yml up -d
       
       - name: Check deploy server URL
