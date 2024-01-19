@@ -30,19 +30,19 @@ margin-top: 5px;
 .menu{
   float: right;
   width: 90px;
-  
- 
+  margin-top: 18px;
+ text-align: center;
 }
 
 
 .menubtn{
 border:none;
 background-color: white;
-  width :90px;
-  height: 80px;
+  width :60px;
+  height: 40px;
   cursor : pointer;
   margin: 0 auto;
-  margin-top: 5px;
+
   
 }
 .menucontent{
@@ -85,13 +85,13 @@ filter: opacity(0.2) drop-shadow(0 0 0 #BDBDBD);
 
 <div class="logo">
 <a href="/">
- <img alt="logo"  src="../../image/logoimage.png" style="width:110px; height: 80px; margin-top: 10px;">
+ <img alt="logo"  src="../../image/logoimage.png" style="width:105px; height: 58px; margin-top: 10px; margin-left: 5px;">
  </a>
  </div>
  
  <div class="menu">
 <button class="menubtn" >
-<img alt="" src="../../image/menuimage.png" style="width: 30px; ">
+<img alt="" src="../../image/menuimage.png" style="width: 20px; ">
 </button>
 <div class="menucontent">
  		<c:set var="loginok" value="${sessionScope.loginok}"></c:set>

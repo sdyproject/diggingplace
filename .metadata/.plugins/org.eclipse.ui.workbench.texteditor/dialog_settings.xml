@@ -6,8 +6,12 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="selection" value="Likecount"/>
 		<list key="findhistory">
+			<item value="Likecount"/>
+			<item value="menubtn"/>
+			<item value="container"/>
+			<item value="slider"/>
 			<item value="maven-war-plugin"/>
 			<item value="profile-management"/>
 			<item value="btnreviewdelete"/>
@@ -19,10 +23,6 @@
 			<item value="writebtn"/>
 			<item value="후기작성"/>
 			<item value="submitBtn"/>
-			<item value="locationreset"/>
-			<item value="초기화"/>
-			<item value="후기 작성"/>
-			<item value="검색"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>

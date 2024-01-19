@@ -26,7 +26,7 @@
 <style type="text/css">
 .allpopup {
 	width: 100%;
-	height: 1300px;
+	height: 100%;
 	text-align: center;
 	margin-top: 30px;
 }

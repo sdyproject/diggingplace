@@ -26,7 +26,7 @@
 <style type="text/css">
 .allexhibition {
 	width: 100%;
-	height: 1300px;
+	height: 100%;
 	text-align: center;
 	margin-top: 30px;
 }
@@ -231,7 +231,7 @@ margin-right: 3px;
 
 font-size: 10px;
 color: #5d6361;
-margin-right: 11px;
+margin-right: 8px;
 }
 
 

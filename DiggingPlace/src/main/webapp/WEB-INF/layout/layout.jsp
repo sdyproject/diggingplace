@@ -26,28 +26,21 @@ div.layout {
 	height: 100%;
 }
 
-/* div.layout div.menu {
-	position: fixed;
-	width: 200px;
-	height: 100%;
-	z-index: 100;
-	background-color: green;
-} */
 div.layout div.header {
 	
 	position: absolute;
       width:100%;
-      height: 18%;
-      
+      height: 13%;
       box-shadow:0px 0px 15px #BDBDBD;
+      margin-bottom: 10%;
 }
 
 div.layout div.main {
 	
 	 position: absolute;
-      top: 120px;
+      top: 13%;
       width:100%;
-      height: 800px;
+      height: 80%;
      
 		
 		

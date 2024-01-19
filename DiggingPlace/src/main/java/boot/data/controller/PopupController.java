@@ -56,7 +56,7 @@ public class PopupController {
 		int startPage;
 		int endPage;
 		int start;
-		int perPage = 9;
+		int perPage = 8;
 		int perBlock = 3;
 
 		// 총 페이지 개수
@@ -189,7 +189,7 @@ public class PopupController {
 		int startPage;
 		int endPage;
 		int start;
-		int perPage = 9;
+		int perPage = 8;
 		int perBlock = 3;
 
 		// 총 페이지 개수
@@ -302,7 +302,7 @@ public class PopupController {
 		int startPage;
 		int endPage;
 		int start;
-		int perPage = 9;
+		int perPage = 8;
 		int perBlock = 3;
 
 	
@@ -423,7 +423,7 @@ public class PopupController {
 				int startPage;
 				int endPage;
 				int start;
-				int perPage = 9;
+				int perPage = 8;
 				int perBlock = 3;
 
 			
