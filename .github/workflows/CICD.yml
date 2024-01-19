@@ -25,6 +25,7 @@ jobs:
           cd DiggingPlace
           echo ${{ secrets.APPLICATION_SECRET}} | base64 --decode > ./src/main/resources/application-secret.yml
           cat ./src/main/resources/application-secret.yml
+          echo "client_id : ${{ secrets.KAKAO_API}}"
           chmod 777 ./mvnw
           ./mvnw clean package -Dtestskip
      
