@@ -113,33 +113,5 @@ public class LoginController {
 
 	}
 
-	/*
-	 * @RequestMapping(value = "/kakao/login", method = RequestMethod.GET) public
-	 * String Kakaologin(@RequestParam("code") String code, HttpSession session) {
-	 * String access_Token = kakao.getAccessToken(code); HashMap<String, Object>
-	 * loginok = kakao.getUserInfo(access_Token);
-	 * System.out.println("login Controller : " + loginok);
-	 * 
-	 * 
-	 * 
-	 * 
-	 * session.setAttribute("loginok", loginok);
-	 * 
-	 * 
-	 * 
-	 * 
-	 * return "layout";
-	 * 
-	 * 
-	 * 
-	 * 
-	 * }
-	 */
-
-	/*
-	 * @GetMapping("/kakao/logout") public String Kakaologout(HttpSession session) {
-	 * 
-	 * session.removeAttribute("loginok"); return "redirect:/"; }
-	 */
-
+	
 }
