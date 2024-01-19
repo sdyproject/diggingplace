@@ -24,6 +24,7 @@ jobs:
         run: |
           cd DiggingPlace
           echo ${{ secrets.APPLICATION_SECRET}} | base64 --decode > ./src/main/resources/application-secret.yml
+          cat ./src/main/resources/application-secret.yml
           chmod 777 ./mvnw
           ./mvnw clean package -Dtestskip
      
@@ -57,7 +58,7 @@ jobs:
           if [ $CURRENT_UPSTREAM = blue ]; then
             echo "CURRENT_PORT=8080" >> $GITHUB_ENV
             echo "STOPPED_PORT=8081" >> $GITHUB_ENV
-            echo "TARGET_UPSTREAM=green" >> $GITHUB_EN
+            echo "TARGET_UPSTREAM=green" >> $GITHUB_ENV
           else
             echo "CURRENT_PORT=8081" >> $GITHUB_ENV
             echo "STOPPED_PORT=8080" >> $GITHUB_ENV
