@@ -687,7 +687,7 @@ map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
 </script>
 		<br> <br> <br> <br> <b>후기(${reviewcount})</b> <b
-			style="font-size: 14px;"> ★${avgscore} ${noreview } </b>
+			style="font-size: 14px;"> ★${avgscore} ${noreview} </b>
 
 		<hr>
 		<div class="lists">

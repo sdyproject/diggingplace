@@ -2,11 +2,7 @@ INDEX VERSION 1.4+C:\sist1226\diggingplace\.metadata\.plugins\org.eclipse.wst.js
 1100297341.index
 3802423489.index
 2389271331.index
-1855357060.index
 3196925574.index
 2802831694.index
-2244897628.index
-2244897628.index
 4255328064.index
 1752511349.index
-778620011.index

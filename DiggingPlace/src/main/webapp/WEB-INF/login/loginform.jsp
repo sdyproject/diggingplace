@@ -142,7 +142,7 @@ $(document).ready(function() {
 
 
  
-<a class="kakaologin" href=" https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=b3c89b327a8911aa45ecf2c1e3649af7&redirect_uri=http://43.200.224.241/kakao/login"> 
+<a class="kakaologin" href=" https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=b3c89b327a8911aa45ecf2c1e3649af7&redirect_uri=https://www.diggingplace.com/kakao/login"> 
 <img src="../image/kakao_login_medium_wide.png"></a>
 </form>
 

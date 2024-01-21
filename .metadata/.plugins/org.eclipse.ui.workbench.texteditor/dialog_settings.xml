@@ -6,8 +6,15 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="Likecount"/>
+		<item key="selection" value="nototalreviewlist"/>
 		<list key="findhistory">
+			<item value="nototalreviewlist"/>
+			<item value="client-secret"/>
+			<item value="authorize_code"/>
+			<item value="login-wrapper"/>
+			<item value="8"/>
+			<item value="9"/>
+			<item value="allexhibition"/>
 			<item value="Likecount"/>
 			<item value="menubtn"/>
 			<item value="container"/>
@@ -16,13 +23,6 @@
 			<item value="profile-management"/>
 			<item value="btnreviewdelete"/>
 			<item value="btnlikepopupdelete"/>
-			<item value="삭 제"/>
-			<item value="삭제"/>
-			<item value="totalreviewlist"/>
-			<item value="reviewwrite"/>
-			<item value="writebtn"/>
-			<item value="후기작성"/>
-			<item value="submitBtn"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>
