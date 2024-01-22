@@ -81,9 +81,6 @@ public class LoginController {
 	 
 	  session.removeAttribute("loginok");
 	  
-	  
-	 
-	  
 	  return "redirect:/"; 
 	  }
 	 
@@ -105,8 +102,8 @@ public class LoginController {
 
 		session.setAttribute("member_name", MemberInfo.getMember_name());
 		session.setAttribute("loginemail", MemberInfo.getMember_email());
-		/* session.setAttribute("member_photo", MemberInfo.getMember_photo()); */
 		session.setAttribute("member_gender", MemberInfo.getMember_gender());
+		session.setAttribute("member_birth", MemberInfo.getMember_birth());
 		session.setAttribute("loginok", MemberInfo);
 
 		return "redirect:/";

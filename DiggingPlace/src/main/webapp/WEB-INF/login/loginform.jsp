@@ -141,7 +141,7 @@ $(document).ready(function() {
 <hr style="width: 310px;  border-top: 1px solid #bbb; border-bottom: 1px solid #fff;"> 
 
 
- 
+ 																																
 <a class="kakaologin" href=" https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=b3c89b327a8911aa45ecf2c1e3649af7&redirect_uri=https://www.diggingplace.com/kakao/login"> 
 <img src="../image/kakao_login_medium_wide.png"></a>
 </form>

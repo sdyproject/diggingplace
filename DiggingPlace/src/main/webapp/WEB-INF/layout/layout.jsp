@@ -30,7 +30,7 @@ div.layout div.header {
 	
 	position: absolute;
       width:100%;
-      height: 13%;
+      height: 10%;
       box-shadow:0px 0px 15px #BDBDBD;
       margin-bottom: 10%;
 }
@@ -41,10 +41,7 @@ div.layout div.main {
       top: 13%;
       width:100%;
       height: 80%;
-     
-		
-		
-	
+
 }
 
 

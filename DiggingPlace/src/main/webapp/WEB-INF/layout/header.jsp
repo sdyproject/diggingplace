@@ -23,15 +23,16 @@
 
 float: left;
 width: 120px;
-height: 200px;
-margin-top: 5px;
-
+height: 40px;
+margin-top: 1%;
+margin-left: 0.5%;
 }
 .menu{
   float: right;
   width: 90px;
-  margin-top: 18px;
+  margin-top: 1%;
  text-align: center;
+
 }
 
 
@@ -85,14 +86,14 @@ filter: opacity(0.2) drop-shadow(0 0 0 #BDBDBD);
 
 <div class="logo">
 <a href="/">
- <img alt="logo"  src="../../image/logoimage.png" style="width:105px; height: 58px; margin-top: 10px; margin-left: 5px;">
+ <img alt="logo"  src="../../image/logoimage.png" style="width:120px; height: 40px;">
  </a>
  </div>
  
  <div class="menu">
 <button class="menubtn" >
-<img alt="" src="../../image/menuimage.png" style="width: 20px; ">
-</button>
+<img alt="" src="../../image/menuimage.png" style="width: 25px;">
+</button> 	
 <div class="menucontent">
  		<c:set var="loginok" value="${sessionScope.loginok}"></c:set>
  		<c:if test="${empty loginok}"> 

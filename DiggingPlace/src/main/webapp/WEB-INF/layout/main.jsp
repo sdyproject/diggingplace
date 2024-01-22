@@ -18,9 +18,8 @@
 #main-content{
 width: 800px;
 height: 250px;
-
 margin: 0 auto;
-margin-top: 100px; 
+margin-top: 30px; 
 }
 .exhibition{
 width: 48%;
@@ -40,7 +39,6 @@ filter: opacity(0.5) drop-shadow(0 0 0 gray);
 box-shadow:0px 0px 8px gray;
 }
 .exhibition img{
-
 width: 200px;
 height: 100px;
  filter: opacity(0.5) drop-shadow(0 0 0 #6E6E6E); 
@@ -51,7 +49,6 @@ height: 100px;
   transform: scale(1.1);
 }
 .popup{
-
 width: 48%;
 height: 100%;
 float: right;
@@ -66,9 +63,6 @@ border: 1px solid gray;
 color:gray;
 filter: opacity(0.5) drop-shadow(0 0 0 gray);
 box-shadow:0px 0px 8px gray;
-
-			
-
 }
 .popup img{
 width: 200px;
@@ -83,18 +77,18 @@ transition: all 0.2s linear;
 }
 .container {
 width: 100%;
-margin-top: 17px;
 
+opacity: 0.9;
 
 }
 
-#slider {
-            opacity: 1;
-            width: 100%;
-            height: 300px;
-          
-           
-        }
+#slider{
+opacity: 1;
+width: 100%;
+height: 300px;
+margin: 0px 0px 0px 0px;
+border-radius: unset;            
+}
 
 
 </style>
@@ -107,7 +101,7 @@ var minOpacity = 1;
 var speed = 20;
 var timer = 4000;
 var pics = [];
-"../image/banner1-1.png";
+
 pics[0] = "../image/banner1-1.png";
 pics[1] = "../image/banner2.jpg";
 
@@ -173,7 +167,7 @@ window.onload = imageSliderIn;
 <body>
 
 <div class="container">
-    <img src="../image/banner1-1.png" id="slider" alt="Image">
+    <img src="../image/banner1-1.png" id="slider" alt="Image" >
 </div>
 
 

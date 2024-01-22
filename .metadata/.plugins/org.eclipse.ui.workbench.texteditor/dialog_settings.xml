@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="nototalreviewlist"/>
+		<item key="selection" value="main-content"/>
 		<list key="findhistory">
+			<item value="main-content"/>
 			<item value="nototalreviewlist"/>
 			<item value="client-secret"/>
 			<item value="authorize_code"/>
@@ -22,7 +23,6 @@
 			<item value="maven-war-plugin"/>
 			<item value="profile-management"/>
 			<item value="btnreviewdelete"/>
-			<item value="btnlikepopupdelete"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>
