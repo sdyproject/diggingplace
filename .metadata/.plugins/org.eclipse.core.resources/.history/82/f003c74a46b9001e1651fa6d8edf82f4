@@ -73,13 +73,6 @@ spring:
 #      enabled: true
 
 
-#mysql
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/seo?serverTimezone=Asia/Seoul
-    username: dragon
-    password: 1234
-     
 
   
 

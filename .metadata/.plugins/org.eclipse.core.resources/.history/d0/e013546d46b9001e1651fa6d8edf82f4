@@ -86,7 +86,7 @@ filter: opacity(0.2) drop-shadow(0 0 0 #BDBDBD);
 
 <div class="logo">
 <a href="/">
- <img alt="logo"  src="../../image/logoimage.png" style="width:120px; height: 50px;">
+ <img alt="logo"  src="../../image/logoimage.png" style="width:120px; height: 40px;">
  </a>
  </div>
  
