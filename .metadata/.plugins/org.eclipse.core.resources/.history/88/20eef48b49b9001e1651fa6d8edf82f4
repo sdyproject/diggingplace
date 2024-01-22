@@ -23,7 +23,7 @@
 
 float: left;
 width: 120px;
-height: 40px;
+height: 55px;
 margin-top: 1%;
 margin-left: 0.5%;
 }
@@ -86,8 +86,8 @@ filter: opacity(0.2) drop-shadow(0 0 0 #BDBDBD);
 
 <div class="logo">
 <a href="/" style="color: #BDBDBD">
- <img alt="logo"  src="../../image/logoimage.png" style="width:120px; height: 40px;">
-
+ <!-- <img alt="logo"  src="../../image/logoimage.png" style="width:120px; height: 50px;"> -->
+ Diggingplace
  </a>
  </div>
  
