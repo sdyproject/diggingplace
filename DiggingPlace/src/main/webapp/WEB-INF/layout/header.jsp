@@ -23,7 +23,7 @@
 
 float: left;
 width: 120px;
-height: 50px;
+height: 55px;
 margin-top: 1%;
 margin-left: 0.5%;
 }
