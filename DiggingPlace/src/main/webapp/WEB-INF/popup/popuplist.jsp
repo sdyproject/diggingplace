@@ -371,7 +371,7 @@ $(function(){
 							style="width: 328px; height: 230px; cursor: pointer;">
 						</c:if>
 						<c:if test="${e.popup_image==null}">
-							<img src="../image/logoimage.png"
+							<img src="../image/logoimage2.png"
 							onclick="location.href='popupdetail/${e.popup_num}'"
 							style="width: 298px; height: 230px; cursor: pointer;">
 						</c:if>

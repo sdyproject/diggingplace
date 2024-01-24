@@ -33,21 +33,7 @@
 	text-align: center;
 	
 }
-input[type="file"]+label {
-	background-color: #6E6E6E;
-	width: 80px;
-	border-radius: 10px;
-	border: none;
-	height: 25px;
-	font-size: 10px;
-	color: white;
-	cursor: pointer;
-	text-align: center;
-	line-height: 21px;
-	align-items: center;
-	justify-content: center;
-	margin-left: 15px;
-}
+
 #contents input{
 	width: 300px;
 	height: 45px;
@@ -56,6 +42,9 @@ input[type="file"]+label {
 	margin-bottom: 4px;
 	margin-top: 4px;
 	font-size: 13px;
+	box-shadow: none;
+	 outline: none;
+	 
 	}
 .content-inputbox{
 	margin-bottom: 30px;
@@ -65,6 +54,7 @@ input[type="file"]+label {
 .content-inputbox span{
 	margin-right: 250px;
 	font-size: 12px;
+	
 
 }
 .content-inputbox div{
@@ -183,18 +173,21 @@ background-color: white;
 				<div class="content-inputbox"  id="search-form">
 					<div>
 						<span style="margin-right: 280px;"><b>이름</b></span> <br> <input type="text"
-							  name="member_name" id="member_name" required="required">
+							  name="member_name" id="member_name" required="required" autocomplete='off'
+							  placeholder="이름을 입력해주세요.">
 					</div>
 					<div>
 						<span style="margin-right: 260px;"><b>생년월일</b></span><br> <input type="date"
-							name="member_birth" id="member_birth" required="required">
+							name="member_birth" id="member_birth" required="required"
+							>
 					</div>
 					<div>
 						<span style="margin-right: 270px;"><b>연락처</b></span><br> <input type="text" maxlength="11"
 							 oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
-							name="member_hp" id="member_hp" required="required">
+							name="member_hp" id="member_hp" required="required" autocomplete='off'
+							placeholder="(-)없이 숫자만입력하세요.">
 					</div>
-					
+					<br>
 					<button type="button"  class="btn-search" >찾기</button>			
 					
 				</div>

@@ -558,7 +558,7 @@ $("#wirtereview").click(function () {
 					style="width: 300px; height: 400px;">
 			</c:if>
 			<c:if test="${Edto.popup_image==null}">
-				<img src="../../image/logoimage.png"
+				<img src="../../image/logoimage2.png"
 					style="width: 300px; height: 400px;">
 			</c:if>
 		</div>

@@ -151,8 +151,7 @@
         update member set member_pass=#{member_pass} where member_email=#{member_email}
     </update>
   
-    
-    
+      
 	
 	
 </mapper>

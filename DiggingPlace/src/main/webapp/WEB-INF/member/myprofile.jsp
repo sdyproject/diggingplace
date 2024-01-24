@@ -348,7 +348,7 @@ input[type="file"]+label {
 				</div>
 				<div class="image-wrapper">
 					<c:if test="${dto.member_photo==null }">
-						<img src="../image/logoimage.png" id="profile-img">
+						<img src="../image/logoimage2.png" id="profile-img">
 					</c:if>
 					<c:if test="${dto.member_photo!=null }">
 						<img alt="" src="../../photo/${dto.member_photo}" id="profile-img">
@@ -420,11 +420,7 @@ input[type="file"]+label {
 			history.back();
 		});
 
-		/* $(".profile-update").click(function() {
-			alert("수정하시겠습니까?");
-
-		});
-		 */
+		
 		
 	</script>
 </body>

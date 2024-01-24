@@ -161,6 +161,21 @@ public class MemberService implements MemberServiceInter{
 		return mapper.getMemberPopupReviewList(map);
 	}
 
+	@Override
+	public int memberEmail(String meber_email) {
+		// TODO Auto-generated method stub
+		return mapper.memberEmail(meber_email);
+	}
+
+	@Override
+	public void updateTemporarilyPass(String member_pass, String member_email) {
+		// TODO Auto-generated method stub
+		Map<String,String> map=new HashMap<>();
+        map.put("member_pass",member_pass);
+        map.put("member_email",member_email);
+        mapper.updateTemporarilyPass(map);
+	}
+
 	
 	
 

@@ -29,9 +29,9 @@ public interface MemberServiceInter {
 	public String FindMemberPass(String member_name);
 	public List<MemberDto> getMemberReview(String exhibition_num);
 	public List<MemberDto> getMemberPopupsReview(String popup_num);
-
 	public List<MemberDto> getMemberReviewList(String exhibition_num,int start, int perpage);
 	public List<MemberDto> getMemberPopupReviewList(String popup_num,int start, int perpage);
-	
+	public int memberEmail(String meber_email);
+	public void updateTemporarilyPass(String member_pass,String member_email);
 
 }

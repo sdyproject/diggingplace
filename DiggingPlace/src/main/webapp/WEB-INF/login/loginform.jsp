@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Diggingplace</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
 <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
@@ -117,7 +117,8 @@ $(document).ready(function() {
 	
 		
 	<input type="email" name="member_email" class="form-control"  placeholder="이메일을 입력해주세요." id="member_email" 
-	required="required" autofocus="autofocus" style="width: 300px; margin-bottom: 5px; border-radius: 10px; box-shadow: none; outline: none; border-color: #BDBDBD; margin: 0 auto;"
+	required="required" autofocus="autofocus" style="width: 300px; margin-bottom: 5px; border-radius: 10px; box-shadow: none;
+	 outline: none; border-color: #BDBDBD; margin: 0 auto;" autocomplete='off'
 				value="${sessionScope.cbsave==null?'':sessionScope.loginemail }">
 
 
@@ -125,7 +126,7 @@ $(document).ready(function() {
 	required="required"  style="width: 300px;  margin-bottom: 5px; border-radius: 10px;  box-shadow: none; outline: none; border-color: #BDBDBD; margin: 0 auto;">
 
 			<input type="checkbox" name="cbsave" class="idcheck"
-			${sessionScope.cbsave==null?"":"checked"} style="vertical-align: -3px;"><b style="font-size: 10px; margin-right: 230px; "> 아이디저장</b>
+			${sessionScope.cbsave==null?"":"checked"} style="vertical-align: -3px;"><b style="font-size: 10px; margin-right: 230px; ">이메일저장</b>
 			<br><br>
 <button type="submit" class="mlogin">로그인</button> <br>
 

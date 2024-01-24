@@ -213,7 +213,7 @@ public class MemberController {
 
 	}
 	
-	// 나의 정보로 이동
+	
 		@GetMapping("/memberpopup")
 		public ModelAndView memberpopup(Model model, HttpSession session,
 				
@@ -297,7 +297,7 @@ public class MemberController {
 
 		}
 		
-		// 나의 정보로 이동
+		
 		@GetMapping("/memberreview")
 		public ModelAndView memberreview(Model model, HttpSession session,
 				
@@ -405,51 +405,38 @@ public class MemberController {
 		return map2;
 	}
 
-	@GetMapping("/member/memberfindpass")
-	public String memberfind() {
-		return "/member/memberfindpass";
-	}
+	
 
-	@GetMapping("/member/findmemberpass")
-	@ResponseBody
-	public Map<String, Object> memberfindproccess(String member_name, String member_email, String member_hp) {
-
-		int findpass = mservice.MemberPassCheck(member_name, member_email, member_hp);
-		System.out.println(member_name);
-		System.out.println(member_email);
-		System.out.println(member_hp);
-		System.out.println(findpass);
-
-		String pass = mservice.FindMemberPass(member_name);
-		String temporary_pass = "";
-
-		Map<String, Object> map2 = new HashMap<>();
-
-		System.out.println("pass:" + pass);
-		String mpass = "";
-
-		for (int i = 0; i < pass.length(); i++) {
-			if (i < pass.length() - 6) {
-				mpass += "*";
-			} else {
-				mpass += pass.charAt(i);
-			}
-		}
-		System.out.println("mpass:" + mpass);
-		map2.put("mpass", mpass);
-
-		map2.put("findpass", findpass);
-		map2.put("pass", pass);
-
-		if (findpass != 0) {
-			UUID uid = UUID.randomUUID();
-
-			temporary_pass = uid.toString().substring(0, 8);
-
-			System.out.println("temporary_pass" + temporary_pass);
-		}
-		return map2;
-	}
+	/*
+	 * @GetMapping("/member/findmemberpass")
+	 * 
+	 * @ResponseBody public Map<String, Object> memberfindproccess(String
+	 * member_name, String member_email, String member_hp) {
+	 * 
+	 * int findpass = mservice.MemberPassCheck(member_name, member_email,
+	 * member_hp); System.out.println(member_name);
+	 * System.out.println(member_email); System.out.println(member_hp);
+	 * System.out.println(findpass);
+	 * 
+	 * String pass = mservice.FindMemberPass(member_name); String temporary_pass =
+	 * "";
+	 * 
+	 * Map<String, Object> map2 = new HashMap<>();
+	 * 
+	 * System.out.println("pass:" + pass); String mpass = "";
+	 * 
+	 * for (int i = 0; i < pass.length(); i++) { if (i < pass.length() - 6) { mpass
+	 * += "*"; } else { mpass += pass.charAt(i); } } System.out.println("mpass:" +
+	 * mpass); map2.put("mpass", mpass);
+	 * 
+	 * map2.put("findpass", findpass); map2.put("pass", pass);
+	 * 
+	 * if (findpass != 0) { UUID uid = UUID.randomUUID();
+	 * 
+	 * temporary_pass = uid.toString().substring(0, 8);
+	 * 
+	 * System.out.println("temporary_pass" + temporary_pass); } return map2; }
+	 */
 
 	// 삭제
 	@GetMapping("/member/memberdelete")
@@ -498,18 +485,25 @@ public class MemberController {
 		return "redirect:/myinfo";
 	}
 	
-	/*
-	 * // 임시 비밀번호 발급
-	 * 
-	 * @GetMapping("/member/passSearchMailSender")
-	 * 
-	 * @ResponseBody public int passSearchMailSender(@RequestParam String email) {
-	 * System.out.println(email);
-	 * 
-	 * int checkEmail = mservice.isUserEmail(email); System.out.println(checkEmail);
-	 * if (checkEmail == 1) { MailApi.mailSend(email); String randompass =
-	 * MailApi.getRandompass(); System.out.println(randompass);
-	 * mservice.updateTemporarilyPass(randompass, email); } return checkEmail; }
-	 */
+	@GetMapping("/member/memberfindpass")
+	public String passSearchForm() {
+		return "/member/memberfindpass";
+	}
+	 
+	  
+	  @GetMapping("/member/passSearchMailSender")
+	  @ResponseBody public int passSearchMailSender(@RequestParam String email) {
+	  System.out.println(email);
+	  
+	  int checkEmail = mservice.memberEmail(email); System.out.println(checkEmail);
+	  if (checkEmail == 1) { 
+		  MailSender.mailSend(email); 
+		  String randompass =  MailSender.getRandompass(); 
+		  System.out.println(randompass);
+	  mservice.updateTemporarilyPass(randompass, email); 
+	  } 
+	  return checkEmail; 
+	  }
+	 
 
 }

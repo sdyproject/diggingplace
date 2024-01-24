@@ -58,6 +58,7 @@
 	margin-top: 20px;
 	border:  1px solid #BDBDBD;
 	margin-left: 10px;
+	box-shadow: 0px 0px 5px #BDBDBD; 
 }
 
 .info-wrapper {

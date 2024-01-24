@@ -3,7 +3,6 @@ INDEX VERSION 1.132+C:\sist1226\diggingplace\.metadata\.plugins\org.eclipse.jdt.
 2601674459.index
 3386977474.index
 4129717420.index
-2241853112.index
 3737478778.index
 2313002315.index
 3066414736.index

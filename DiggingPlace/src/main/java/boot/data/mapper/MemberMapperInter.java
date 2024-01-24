@@ -34,7 +34,9 @@ public interface MemberMapperInter {
 	public List<MemberDto> getMemberPopupsReview(String popup_num);
 	public List<MemberDto> getMemberReviewList(Map<String, Object> map);
 	public List<MemberDto> getMemberPopupReviewList(Map<String, Object> map);
-	
+	public int memberEmail(String meber_email);
+	public void updateTemporarilyPass(Map<String,String> map);
+
 
 
 	

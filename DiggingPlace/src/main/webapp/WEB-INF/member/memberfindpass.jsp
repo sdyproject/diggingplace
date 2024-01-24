@@ -22,75 +22,50 @@
 
 
 </head>
-<style>
-#find-wrapper {
-	width: 500px;
-	height: 500px;
-	margin: 0 auto;
-	box-shadow:0px 0px 5px #BDBDBD;
-	border-radius: 10px;
-	margin-top: 50px;
-	text-align: center;
-	
-}
-input[type="file"]+label {
-	background-color: #6E6E6E;
-	width: 80px;
-	border-radius: 10px;
-	border: none;
-	height: 25px;
-	font-size: 10px;
-	color: white;
-	cursor: pointer;
-	text-align: center;
-	line-height: 21px;
-	align-items: center;
-	justify-content: center;
-	margin-left: 15px;
-}
-#contents input{
-	width: 300px;
-	height: 45px;
-	border-radius: 10px;
-	border: 1px solid #BDBDBD;
-	margin-bottom: 4px;
-	margin-top: 4px;
-	font-size: 13px;
-	}
-.content-inputbox{
-	margin-bottom: 30px;
-}
+ <style>
+        
 
-	
-.content-inputbox span{
-	margin-right: 250px;
-	font-size: 12px;
-
-}
-.content-inputbox div{
-	margin-bottom: 5px;
+.search-wrapper {
+width: 500px;
+height: 400px;
+margin: 0 auto;
+box-shadow:0px 0px 5px #BDBDBD;
+border-radius: 10px;
+margin-top: 50px;
+text-align: center;
 }
 
 .btn-search{
 background-color: #BDBDBD;
-	width: 300px; border-radius: 10px; 
-	 border: none;  height: 45px; 
-	 font-size: 13px;
-	color: white; margin-bottom: 5px;
-	
+width: 300px; border-radius: 10px; 
+border: none;  height: 45px; 
+font-size: 13px;
+color: white; margin-bottom: 5px;
+margin-top:5%;	
 }
 .btn-search:hover {
 background-color: white;
 	color: #BDBDBD;
 	border: 1px solid #BDBDBD;	
 }
+#note {
+opacity: 0.7;
+ margin-bottom: 30px;
+ font-size: 13px;
+}
 
+#content {
+ font-size: 15px;
+ margin: 80px 0;
+ line-height: 30px;
+}
+        
 .moveLogin{
 background-color: #6e6e6e;
-	width: 300px; border-radius: 10px; 
-	 border: none;  height: 45px; 
-	 font-size: 13px;
-	color: white; margin-bottom: 5px;
+width: 300px; border-radius: 10px; 
+border: none;  height: 45px; 
+font-size: 13px;
+color: white; margin-bottom: 5px;
 	
 }
 .moveLogin:hover {
@@ -98,124 +73,108 @@ background-color: white;
 	color: #BDBDBD;
 	border: 1px solid #BDBDBD;	
 }
-
+.moveform{
+background-color: #6e6e6e;
+width: 300px; border-radius: 10px; 
+border: none;  height: 45px; 
+font-size: 13px;
+color: white; margin-bottom: 5px;
+	
+}
+.moveform:hover {
+background-color: white;
+	color: #BDBDBD;
+	border: 1px solid #BDBDBD;	
+}
 .movefindemail{
 background-color: #BDBDBD;
-	width: 300px; border-radius: 10px; 
-	 border: none;  height: 45px; 
-	 font-size: 13px;
-	color: white; margin-bottom: 5px;
+width: 300px; border-radius: 10px; 
+border: none;  height: 45px; 
+font-size: 13px;
+color: white; margin-bottom: 5px;
 	
 }
 .movefindemail:hover {
 background-color: white;
-	color: #BDBDBD;
-	border: 1px solid #BDBDBD;	
+	color: #6e6e6e;
+	border: 1px solid #6e6e6e;	
 }
-#content{
-font-size: 15px;
-margin-bottom: 100px;
-margin-top: 50px;
+
+#email{
+width: 300px;
+	height: 45px;
+	border-radius: 10px;
+	border: 1px solid #BDBDBD;
+	margin-bottom: 4px;
+	margin-top: 4px;
+	font-size: 13px;
+	box-shadow: none;
+	 outline: none;
 }
-.page-back{
-background-color: #6e6e6e;
-	width: 300px; border-radius: 10px; 
-	 border: none;  height: 45px; 
-	 font-size: 13px;
-	color: white; margin-bottom: 5px;
+#search-form b{
+font-size: 12px;
+margin-right: 250px;
 }
-.page-back:hover{
-background-color: white;
-	color: #BDBDBD;
-	border: 1px solid #BDBDBD;	
-}
-	
-	
-</style>
-<script>
+
+    </style>
+    <script>
         $(document).ready(function () {
             $("#result-form").hide();
-           
             $(".btn-search").click(function () {
-                let member_name = $("#member_name").val();
-                let member_email = $("#member_email").val();
-                let member_hp = $("#member_hp").val();
+                let email = $("#email").val();
                 $.ajax({
                     type: "get",
-                    url: "findmemberpass",
-                    data: {
-                        "member_name": member_name,
-                        "member_email": member_email,
-                        "member_hp": member_hp
-                    },
-                    success: function (res) {
-                    			
-                    	$("find-wrapper").hide();
+                    url: "passSearchMailSender",
+                    data: {"email":email},
+                    success: function(res) {
                         $("#search-form").hide();
-                        $(".page-back").hide();
-                        if (res.findpass == 1) {
-                            $("#content").append("회원님의 비밀번호는<br> " + res.mpass + " 입니다.<br>");
-                           
-                        } else {
-                            $("#content").append("가입된 회원이 존재하지 않습니다.");
-                            $(".moveLogin").hide();
-                            $(".movefindemail").hide();
-                            $(".page-back").show();
-                            $(".page-back").click(function() {
-                            	location.reload();
-                    		});
-                        }
                         $("#result-form").show();
+                        $(".moveform").hide();
+                        $(".movefindemail").hide();
+                        if (res===1) {
+                        	
+                            $("#content").innerHTML("입력하신 이메일로 임시 비밀번호를 전송하였습니다.");
+                            
+                        } else {
+                            $("#content").append("가입된 이메일이 존재하지 않습니다.");
+                            $("#note").hide();
+                            $(".moveLogin").hide();
+                            $(".moveform").show();
+                            $(".movefindemail").show();
+                        }
+                       
                     }
                 });
             });
         });
-        
-       
     </script>
+</head>
 <body>
-<div id="find-wrapper">
-<br><br>
+<div class="search-wrapper">
+    <br><br>
 				<b>비밀번호 찾기</b> <br> <br>
-			<div id="contents">
-				<br>
-				<form>
-				<div class="content-inputbox"  id="search-form">
-					<div>
-						<span style="margin-right: 280px;"><b>이름</b></span> <br> <input type="text"
-							  name="member_name" id="member_name" required="required">
-					</div>
-					<div>
-						<span style="margin-right: 260px;"><b>이메일</b></span><br> <input type="email"
-							name="member_email" id="member_email" required="required">
-					</div>
-					<div>
-						<span style="margin-right: 270px;"><b>연락처</b></span><br> <input type="text" maxlength="11"
-							 oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
-							name="member_hp" id="member_hp" required="required">
-					</div>
-					
-					<button type="button" class="btn-search" >찾기</button>			
-					
-				</div>
-				
-				
-				</form>
-			</div>
-				 <form id="result-form">
-        	<div id="content" align="center"></div>
-        	
-        		<button type="button" class="moveLogin" 
-               onclick="location.href='/member/loginform'">로그인</button>
-               <button type="button" class="page-back">이전</button>
-               <br>
-               <br>
-                <button type="button" class="movefindemail" 
-               onclick="location.href='/member/memberfindemail'" >이메일 찾기</button>
-               
+   
+    <div id="note" align="center">가입 시 등록하신 이메일을 입력하시면,<br>이메일로 임시 비밀번호를 전송해 드립니다.</div>
+    
+    
+    <form id="search-form">
+        <b>이메일</b><br>
+        <input type="text" name="email" id="email" required="required" autofocus="autofocus" 
+        placeholder="이메일을 입력해주세요." autocomplete='off'>
+		<br>
+        <button type="button"  class="btn-search submitBtn">임시 비밀번호 전송</button>
+         
+
     </form>
-			
-				
+    
+    <form id="result-form">
+        <div id="content" align="center"></div>
+        
+        <button type="button" class="movefindemail" value="이메일 찾기"   onclick="location.href='memberfindemail'" >이메일 찾기</button> 
+        <button type="button" class="moveLogin" value="로그인"   onclick="location.href='loginform'" >로그인</button> 
+        <button type="button" class="moveform" value="회원가입"   onclick="location.href='memberform'" >회원가입</button> 
+             	  
+    </form>
 </div>
 </body>
 </html>

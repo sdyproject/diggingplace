@@ -449,7 +449,7 @@ input[type=checkbox] {
 					</div>
 					<div class="image-wrapper">
 						<c:if test="${dto.member_photo==null }">
-							<img src="../image/logoimage.png" id="profile-img">
+							<img src="../image/logoimage2.png" id="profile-img">
 						</c:if>
 						<c:if test="${dto.member_photo!=null }">
 							<img alt="" src="../../photo/${dto.member_photo}"
