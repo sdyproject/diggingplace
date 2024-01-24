@@ -124,7 +124,7 @@ margin-right: 250px;
                 let email = $("#email").val();
                 $.ajax({
                     type: "get",
-                    url: "passSearchMailSender",
+                    url: "membersearchmail",
                     data: {"email":email},
                     success: function(res) {
                         $("#search-form").hide();
