@@ -24,7 +24,7 @@ jobs:
         run: |
           cd DiggingPlace
           echo ${{ secrets.APPLICATION_SECRET}} | base64 --decode > ./src/main/resources/application-secret.yml
-           echo ${{ secrets.MAILSENDER}} | base64 --decode > ./src/main/java/boot/data/controller
+           echo ${{ secrets.MAILSENDER}} | base64 --decode > ./src/main/java/boot/data/controller/Mailsender.java
           cat ./src/main/resources/application-secret.yml
           chmod 777 ./mvnw
           ./mvnw clean package -Dtestskip
