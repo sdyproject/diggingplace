@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="movefindemail"/>
+		<item key="selection" value="getExhibition_num()"/>
 		<list key="findhistory">
+			<item value="getExhibition_num()"/>
 			<item value="movefindemail"/>
 			<item value="content"/>
 			<item value="result-form"/>
@@ -22,7 +23,6 @@
 			<item value="btn-search submitBtn"/>
 			<item value="가입 시 등록하신 이메일을 입력하시면,"/>
 			<item value="profile-img"/>
-			<item value="logo"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>

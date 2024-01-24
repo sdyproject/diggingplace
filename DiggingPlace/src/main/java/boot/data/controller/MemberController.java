@@ -491,19 +491,16 @@ public class MemberController {
 	}
 	 
 	  
-	  @GetMapping("/member/passSearchMailSender")
-	  @ResponseBody public int passSearchMailSender(@RequestParam String email) {
-	  System.out.println(email);
-	  
-	  int checkEmail = mservice.memberEmail(email); System.out.println(checkEmail);
-	  if (checkEmail == 1) { 
-		  MailSender.mailSend(email); 
-		  String randompass =  MailSender.getRandompass(); 
-		  System.out.println(randompass);
-	  mservice.updateTemporarilyPass(randompass, email); 
-	  } 
-	  return checkEmail; 
-	  }
-	 
+	/*
+	 * @GetMapping("/member/passSearchMailSender")
+	 * 
+	 * @ResponseBody public int passSearchMailSender(@RequestParam String email) {
+	 * System.out.println(email);
+	 * 
+	 * int checkEmail = mservice.memberEmail(email); System.out.println(checkEmail);
+	 * if (checkEmail == 1) { MailSender.mailSend(email); String randompass =
+	 * MailSender.getRandompass(); System.out.println(randompass);
+	 * mservice.updateTemporarilyPass(randompass, email); } return checkEmail; }
+	 */
 
 }

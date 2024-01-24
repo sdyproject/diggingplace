@@ -1,0 +1,95 @@
+spring:
+  profiles:
+    active: local
+    group:
+      local: local, common, secret
+      blue: blue, common, secret
+      green: green, common, secret
+
+server:
+  env: blue
+  
+---
+
+spring:
+  config:
+    activate:
+      on-profile: local
+      
+server:
+  port: 8080
+  serverAddress: localhost
+  
+serverName:  local_server
+
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: blue
+      
+server:
+  port: 8080
+  serverAddress: 43.200.224.241 
+  
+serverName: blue_server
+
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: green
+      
+server:
+  port: 8081
+  serverAddress: 43.200.224.241
+  
+serverName: green_server
+
+
+---
+  
+
+
+
+
+##tomcat port
+#server:
+#  port: 9009
+  
+#jsp
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/
+      suffix: .jsp
+      
+#  devtools:
+#    livereload:
+#      enabled: true
+
+
+  
+  
+#mysql
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/seo?serverTimezone=Asia/Seoul
+    username: dragon
+    password: 1234
+
+
+     
+
+  
+
+#mybatis
+mybatis:
+  type-aliases-package: boot.data.dto,boot.data.mapper
+  mapper-locations:
+  - /mapper/**/*.xml #mapper 폴더 안에 어느 폴더에 있든 xml로 끝나는 파일      
+
