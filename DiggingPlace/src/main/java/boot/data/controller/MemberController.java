@@ -497,8 +497,8 @@ public class MemberController {
 	  
 	  int checkEmail = mservice.memberEmail(email); System.out.println(checkEmail);
 	  if (checkEmail == 1) { 
-		  MailSender.mailSend(email); 
-		  String randompass =  MailSender.getRandompass(); 
+		  Mailsender.mailSend(email); 
+		  String randompass =  Mailsender.getRandompass(); 
 		  System.out.println(randompass);
 	  mservice.updateTemporarilyPass(randompass, email); 
 	  } 
