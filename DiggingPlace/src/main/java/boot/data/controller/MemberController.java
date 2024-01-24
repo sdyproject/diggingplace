@@ -2,7 +2,7 @@ package boot.data.controller;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.MulticastSocket;
+
 import java.util.HashMap;
 
 import java.util.List;
@@ -497,8 +497,8 @@ public class MemberController {
 	  
 	  int checkEmail = mservice.memberEmail(email); System.out.println(checkEmail);
 	  if (checkEmail == 1) { 
-		  Mailsender.mailSend(email); 
-		  String randompass =  Mailsender.getRandompass(); 
+		  MailSender.mailSend(email); 
+		  String randompass =  MailSender.getRandompass(); 
 		  System.out.println(randompass);
 	  mservice.updateTemporarilyPass(randompass, email); 
 	  } 

@@ -7,7 +7,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
-public class Mailsender {
+public class MailSender {
 
     static String randompass="";
     public static String getRamdomPassword(int size) {
