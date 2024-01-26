@@ -21,9 +21,8 @@ jobs:
           distribution: 'temurin'
       - name: access to secrets
         run: |
-         echo "APPLICATION_SECRET=$APPLICATION_SECRET" >> .env
-          env:
-          APPLICATION_SECRET: ${{ secrets.APPLICATION_SECRET}}
+         echo "APPLICATION_SECRET: ${{ secrets.APPLICATION_SECRET}}"
+          
       - name: Build with Maven
         run: |
           cd DiggingPlace
