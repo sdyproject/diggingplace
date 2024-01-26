@@ -23,6 +23,9 @@ jobs:
       - name: Build with Maven
         run: |
           cd DiggingPlace
+          echo "APPLICATION_SECRET=$APPLICATION_SECRET" >> .env
+          env:
+          APPLICATION_SECRET: ${{ secrets.APPLICATION_SECRET}}
           echo ${{ secrets.APPLICATION_SECRET}} | base64 --decode > ./src/main/resources/application-secret.yml
           echo ${{ secrets.MAILSENDER}} | base64 --decode > ./src/main/java/boot/data/controller/MailSender.java
           cat ./src/main/resources/application-secret.yml
