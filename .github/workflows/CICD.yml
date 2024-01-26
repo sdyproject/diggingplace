@@ -21,13 +21,12 @@ jobs:
           distribution: 'temurin'
       - name: access to secrets
         run: |
-         cd DiggingPlace 
-         echo "APPLICATION_SECRET: ${{ secrets.APPLICATION_SECRET}} | base64 --decode > ./src/main/resources/application-secret.yml"
+         echo "APPLICATION_SECRET: ${{ secrets.APPLICATION_SECRET}}"
           
       - name: Build with Maven
         run: |
           cd DiggingPlace
-          echo APPLICATION_SECRET | base64 --decode > ./src/main/resources/application-secret.yml
+          echo "APPLICATION_SECRET: ${{ secrets.APPLICATION_SECRET}}" | base64 --decode > ./src/main/resources/application-secret.yml
           echo ${{ secrets.MAILSENDER}} | base64 --decode > ./src/main/java/boot/data/controller/MailSender.java
           cat ./src/main/resources/application-secret.yml
           chmod 777 ./mvnw
