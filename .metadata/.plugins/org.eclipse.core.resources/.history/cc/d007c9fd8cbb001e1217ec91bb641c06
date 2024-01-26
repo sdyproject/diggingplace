@@ -1,0 +1,27 @@
+package boot.data.service;
+
+import java.io.IOException;
+
+import javax.websocket.Session;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.multipart.MultipartFile;
+
+public class UpdateService {
+
+	@Autowired
+	MemberService mservice;
+	@Autowired
+	S3Service s3service;
+	
+	  public String updateUser( MultipartFile image,Session session) throws IOException {
+
+	        if (!image.isEmpty()){
+
+	            String profileImages = s3service.upload(image, "profileImages");
+	            
+	        }else session.update(null);
+
+	        return 
+	    }
+}

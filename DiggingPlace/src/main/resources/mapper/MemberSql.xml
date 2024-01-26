@@ -62,7 +62,7 @@
 	
 	<!-- 프로필 수정 -->
     <update id="MemberProfileUpdate" parameterType="MemberDto">
-    	update member set member_nickname=#{member_nickname},member_pass=#{member_pass},member_hp=#{member_hp},member_birth=#{member_birth} 
+    	update member set member_nickname=#{member_nickname},member_pass=#{member_pass},member_hp=#{member_hp}
 	    	<if test="member_photo!=null">
 	    	,member_photo=#{member_photo}
 	    	</if>

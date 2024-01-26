@@ -8,10 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import boot.data.dto.ExhibitionLikeDto;
 import boot.data.dto.PopupLikeDto;
-import boot.data.service.ExhibitionLikeService;
-import boot.data.service.ExhibitionService;
 import boot.data.service.MemberService;
 import boot.data.service.PopupLikeService;
 import boot.data.service.PopupService;

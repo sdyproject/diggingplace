@@ -1,0 +1,19 @@
+# S3
+cloud:
+  aws:
+     s3:
+     bucket: 
+    
+   
+#cloud.aws.credentials.accessKey = 
+#cloud.aws.credentials.secretKey = IAM Secret Key 입력
+#cloud.aws.s3.bucket = 자신이 만든 버킷 이름
+#cloud.aws.region.static = ap-northeast-2
+#cloud.aws.stack.auto = false
+
+#cloud.aws.credentials.accessKey=
+#cloud.aws.credentials.secretKey=
+#cloud.aws.s3.bucketName={bucketName}
+#cloud.aws.region.static={region}
+#cloud.aws.stack.auto=false
+

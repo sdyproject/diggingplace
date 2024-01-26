@@ -1,0 +1,9 @@
+cloud:
+	aws:
+	s3:
+# S3
+cloud.aws.credentials.accessKey=
+cloud.aws.credentials.secretKey=
+cloud.aws.s3.bucketName={bucketName}
+cloud.aws.region.static={region}
+cloud.aws.stack.auto-=false

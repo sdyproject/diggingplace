@@ -4,16 +4,10 @@ package boot.data.mapper;
 
 
 
-
-
-
 import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.annotations.Mapper;
-
-import boot.data.dto.ExhibitionDto;
-import boot.data.dto.ExhibitionLikeDto;
 import boot.data.dto.PopupLikeDto;
 
 

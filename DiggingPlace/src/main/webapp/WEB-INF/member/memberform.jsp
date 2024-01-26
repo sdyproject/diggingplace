@@ -147,7 +147,7 @@ input::placeholder {
 				<b>닉네임</b> 
 				<br> 
 				<input type="text"
-					name="member_nickname" id="member_nickname" class="form-control" autocomplete='off'
+					name="member_nickname" id="member_nickname" class="form-control" autocomplete='off' maxlength="10"
 					placeholder="사용할 닉네임을 입력해주세요." required="required"  style="outline: none; box-shadow: none; border-color: #BDBDBD;">
 					<br>
 					<span class="nicknameok"></span>

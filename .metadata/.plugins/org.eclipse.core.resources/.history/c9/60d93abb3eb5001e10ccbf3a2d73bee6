@@ -1,7 +1,0 @@
-spring:
-#mysql
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://3306:3306/mysqldb?serverTimezone=Asia/Seoul
-    username: root
-    password: 714593

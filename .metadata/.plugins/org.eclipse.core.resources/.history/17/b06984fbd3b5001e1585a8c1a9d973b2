@@ -1,7 +1,0 @@
-spring:
-#mysql
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://digginplacedb.cryk4wey42p2.ap-northeast-2.rds.amazonaws.com:3306/sdy5508?serverTimezone=Asia/Seoul
-    username: sdy5508
-    password: sdy714593

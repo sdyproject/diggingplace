@@ -1,27 +1,22 @@
 package boot.data.controller;
 
-import java.sql.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpSession;
-import javax.websocket.Session;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import boot.data.dto.ExhibitionDto;
-import boot.data.dto.ExhibitionLikeDto;
 import boot.data.dto.MemberDto;
 import boot.data.dto.PopupDto;
 import boot.data.dto.ReviewDto;
@@ -29,7 +24,6 @@ import boot.data.service.ExhibitionService;
 import boot.data.service.MemberService;
 import boot.data.service.PopupService;
 import boot.data.service.ReviewService;
-import lombok.val;
 
 @Controller
 public class ReviewController {

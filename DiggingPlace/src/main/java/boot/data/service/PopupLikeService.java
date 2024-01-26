@@ -7,9 +7,8 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import boot.data.dto.ExhibitionLikeDto;
+
 import boot.data.dto.PopupLikeDto;
-import boot.data.mapper.ExhibitionLikeMapperInter;
 import boot.data.mapper.PopupLikeMapperInter;
 
 @Service

@@ -326,8 +326,10 @@ input[type="file"]+label {
 
 <body>
 	<c:set var="loginok" value="${sessionScope.loginok}"></c:set>
-	<form action="updateprofile" method="post"
+	<form action="/member/updateprofile" method="post"
 		enctype="multipart/form-data" id="updateprofile">
+		
+		
 		<input type="hidden" name="member_num" value="${member_num}" id="member_num">
 		<div class="myinfo-wrapper">
 
@@ -351,14 +353,19 @@ input[type="file"]+label {
 						<img src="../image/logoimage2.png" id="profile-img">
 					</c:if>
 					<c:if test="${dto.member_photo!=null }">
-						<img alt="" src="../../photo/${dto.member_photo}" id="profile-img">
+						<img alt="" src="${dto.member_photo}" id="profile-img">
 					</c:if>
 					<br>
+					
 					<input type="file" class="profile-management"
-						id="profile-management" name="upload" onchange="readURL(this);"
-						style="display: none;"><label for="profile-management">사진
+						id="profile-management" name="image" accept="image/*"
+						onchange="readURL(this);"
+						style="display: none;">
+						<label for="profile-management">프로필
 						변경</label>
-
+					
+					
+					
 				</div>
 
 
@@ -419,6 +426,9 @@ input[type="file"]+label {
 		$(".page-back").click(function() {
 			history.back();
 		});
+		
+		
+		
 
 		
 		

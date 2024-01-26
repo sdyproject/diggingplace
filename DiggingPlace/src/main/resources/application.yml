@@ -52,15 +52,6 @@ serverName: green_server
 
 
 ---
-  
-
-
-
-
-##tomcat port
-#server:
-#  port: 9009
-  
 #jsp
 spring:
   mvc:
@@ -72,13 +63,6 @@ spring:
 #    livereload:
 #      enabled: true
 
-
- 
-
-
-     
-
-  
 
 #mybatis
 mybatis:

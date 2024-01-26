@@ -6,31 +6,31 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="getExhibition_num()"/>
+		<item key="selection" value="profiledel"/>
 		<list key="findhistory">
+			<item value="profiledel"/>
+			<item value="onclick"/>
+			<item value="addr"/>
+			<item value="/member/myprofile"/>
+			<item value="getOriginalFilename"/>
+			<item value="profileImages"/>
+			<item value="image"/>
+			<item value="MemberProfileUpdate"/>
+			<item value="cli"/>
+			<item value="Client Secret"/>
 			<item value="getExhibition_num()"/>
 			<item value="movefindemail"/>
 			<item value="content"/>
 			<item value="result-form"/>
 			<item value="moveLogin"/>
-			<item value="/member/memberfindpas"/>
-			<item value="not"/>
-			<item value="btn-search"/>
-			<item value="search-form"/>
-			<item value="content-inputbox"/>
-			<item value="login-wrapper"/>
-			<item value="search-wrapper"/>
-			<item value="btn-search submitBtn"/>
-			<item value="가입 시 등록하신 이메일을 입력하시면,"/>
-			<item value="profile-img"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="746"/>
-		<item key="DIALOG_Y_ORIGIN" value="43"/>
+		<item key="DIALOG_X_ORIGIN" value="945"/>
+		<item key="DIALOG_Y_ORIGIN" value="278"/>
 		<item key="DIALOG_WIDTH" value="446"/>
 		<item key="DIALOG_HEIGHT" value="388"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>

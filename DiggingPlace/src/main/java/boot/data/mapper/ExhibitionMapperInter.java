@@ -6,7 +6,6 @@ import java.util.Map;
 import org.apache.ibatis.annotations.Mapper;
 
 import boot.data.dto.ExhibitionDto;
-import boot.data.dto.ReviewDto;
 
 @Mapper
 public interface ExhibitionMapperInter {

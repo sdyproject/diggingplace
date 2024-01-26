@@ -1,7 +1,6 @@
 package boot.data.controller;
 
-import java.io.File;
-import java.io.IOException;
+
 
 import java.util.HashMap;
 
@@ -13,7 +12,6 @@ import javax.servlet.http.HttpSession;
 //import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 
@@ -23,8 +21,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import java.util.UUID;
-import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import boot.data.dto.ExhibitionDto;
@@ -40,6 +36,7 @@ import boot.data.service.PopupLikeService;
 
 import boot.data.service.PopupService;
 import boot.data.service.ReviewService;
+/*import boot.data.service.S3Service;*/
 
 @Controller
 public class MemberController {
@@ -60,6 +57,10 @@ public class MemberController {
 
 	@Autowired
 	ReviewService rservice;
+	
+	/*
+	 * @Autowired S3Service s3Service;
+	 */
 
 	
 
@@ -459,31 +460,25 @@ public class MemberController {
 		return "/member/myprofile";
 	}
 
-	@PostMapping("/member/updateprofile")
-	public String updateprofile(MemberDto dto, MultipartFile upload, HttpSession session) {
-
-		String path = session.getServletContext().getRealPath("/photo");
-		String fileName = UUID.randomUUID().toString() + "_" + upload.getOriginalFilename();
-
-		if (upload.isEmpty()) {
-			dto.setMember_photo(null);
-
-		} else {
-			dto.setMember_photo(fileName);
-
-			try {
-				upload.transferTo(new File(path + "\\" + fileName));
-			} catch (IllegalStateException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-		mservice.MemberProfileUpdate(dto);
-		return "redirect:/myinfo";
-	}
+	/*
+	 * @PostMapping("/member/updateprofile") public String updateprofile(MemberDto
+	 * dto, MultipartFile upload, HttpSession session) {
+	 * 
+	 * String path = session.getServletContext().getRealPath("/photo"); String
+	 * fileName = UUID.randomUUID().toString() + "_" + upload.getOriginalFilename();
+	 * 
+	 * if (upload.isEmpty()) { dto.setMember_photo(null);
+	 * 
+	 * } else { dto.setMember_photo(fileName);
+	 * 
+	 * try { upload.transferTo(new File(path + "\\" + fileName)); } catch
+	 * (IllegalStateException e) { // TODO Auto-generated catch block
+	 * e.printStackTrace(); } catch (IOException e) { // TODO Auto-generated catch
+	 * block e.printStackTrace(); } } mservice.MemberProfileUpdate(dto); return
+	 * "redirect:/myinfo"; }
+	 */
+	
+	
 	
 	@GetMapping("/member/memberfindpass")
 	public String passSearchForm() {
@@ -502,5 +497,11 @@ public class MemberController {
 	  MailSender.getRandompass(); System.out.println(randompass);
 	  mservice.updateTemporarilyPass(randompass, email); } return checkEmail; }
 	 
+	  
+	  @GetMapping("/member/updateprofile")
+		public String test() {
+			return "/member/myprofile";
+		}
+		 
 
 }

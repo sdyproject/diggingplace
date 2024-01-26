@@ -1,0 +1,20 @@
+package boot.data.service;
+
+import java.io.UnsupportedEncodingException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLDecoder;
+
+public class S3Service {
+
+	
+	private String getKeyFromImageAddress(String imageAddress){
+		  try{
+		    URL url = new URL(imageAddress);
+		    String decodingKey = URLDecoder.decode(url.getPath(), "UTF-8");
+		    return decodingKey.substring(1); // 맨 앞의 '/' 제거
+		  }catch (MalformedURLException | UnsupportedEncodingException e){
+		    throw new IllegalArgumentException("Error: IO_EXCEPTION_ON_IMAGE_DELETE"));
+		  }
+		}
+}

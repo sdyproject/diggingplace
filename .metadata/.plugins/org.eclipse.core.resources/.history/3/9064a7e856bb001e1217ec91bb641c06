@@ -1,0 +1,15 @@
+# S3
+cloud:
+  aws:
+    stack:
+      auto: false
+    region:
+      static: ap-northeast-2
+    credentials:
+      access-key: AKIATMI7KEOJG7GV73PX
+      secret-key: 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
+    s3:
+      bucket: digging-bucket
+
+
+
