@@ -498,10 +498,7 @@ public class MemberController {
 	  mservice.updateTemporarilyPass(randompass, email); } return checkEmail; }
 	 
 	  
-	  @GetMapping("/member/updateprofile")
-		public String test() {
-			return "/member/myprofile";
-		}
+
 		 
 
 }

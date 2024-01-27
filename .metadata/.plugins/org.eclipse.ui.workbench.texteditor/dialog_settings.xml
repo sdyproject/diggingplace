@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="profiledel"/>
+		<item key="selection" value="profile-img"/>
 		<list key="findhistory">
+			<item value="profile-img"/>
 			<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;"/>
 			<item value="profiledel"/>
 			<item value="onclick"/>
@@ -22,15 +23,14 @@
 			<item value="getExhibition_num()"/>
 			<item value="movefindemail"/>
 			<item value="content"/>
-			<item value="result-form"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="945"/>
-		<item key="DIALOG_Y_ORIGIN" value="278"/>
+		<item key="DIALOG_X_ORIGIN" value="1364"/>
+		<item key="DIALOG_Y_ORIGIN" value="339"/>
 		<item key="DIALOG_WIDTH" value="446"/>
 		<item key="DIALOG_HEIGHT" value="388"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>

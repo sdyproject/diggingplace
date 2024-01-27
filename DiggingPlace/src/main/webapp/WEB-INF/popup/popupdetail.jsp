@@ -730,10 +730,10 @@ map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 							</c:if>
 					
 						<c:if test="${e.member_photo==null }">
-							<img src="../../image/logoimage.png" id="profile-img">
+							<img src="../../image/logoimage2.png" id="profile-img">
 						</c:if>
 						<c:if test="${e.member_photo!=null }">
-							<img alt="" src="../../photo/${e.member_photo}"
+							<img alt="" src="${e.member_photo}"
 								id="profile-img">
 						</c:if>
 						<b>${e.member_nickname}</b> 
