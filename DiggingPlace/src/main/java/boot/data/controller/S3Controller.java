@@ -57,8 +57,9 @@ public class S3Controller {
 			dto.setMember_photo(null);
 		} else {
 			dto.setMember_photo(uploadurl);
-			mservice.MemberProfileUpdate(dto);
+			
 		}
+		mservice.MemberProfileUpdate(dto);
 		return "redirect:/myinfo";
 	}
 

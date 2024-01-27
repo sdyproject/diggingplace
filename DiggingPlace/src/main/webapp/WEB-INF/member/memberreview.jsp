@@ -431,10 +431,10 @@ color: #5d6361;font-size: 10px;outline: none;text-decoration: underline;
 					</div>
 					<div class="image-wrapper">
 						<c:if test="${dto.member_photo==null }">
-							<img src="../image/logoimage.png" id="profile-img">
+							<img src="../image/logoimage2.png" id="profile-img">
 						</c:if>
 						<c:if test="${dto.member_photo!=null }">
-							<img alt="" src="../../photo/${dto.member_photo}"
+							<img alt="" src="${dto.member_photo}"
 								id="profile-img">
 						</c:if>
 					</div>
