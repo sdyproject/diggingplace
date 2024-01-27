@@ -1,7 +1,7 @@
 package boot.data.controller;
 
 import java.io.IOException;
-
+import java.util.UUID;
 
 import javax.servlet.http.HttpSession;
 
@@ -42,7 +42,7 @@ public class S3Controller {
 		String loginemail = (String) session.getAttribute("loginemail");
 		String nickname = mservice.getMemberName(loginemail);
 		System.out.println(nickname);
-		String name = nickname + "_" + image.getOriginalFilename();
+		String name = UUID.randomUUID().toString() + "_" + image.getOriginalFilename();
 		String bucketkey = uploadprofile + name;
 		ObjectMetadata objectMetadata = new ObjectMetadata();
 		objectMetadata.setContentType(image.getContentType());
@@ -57,6 +57,7 @@ public class S3Controller {
 			dto.setMember_photo(null);
 		} else {
 			dto.setMember_photo(uploadurl);
+			
 			
 		}
 		mservice.MemberProfileUpdate(dto);
