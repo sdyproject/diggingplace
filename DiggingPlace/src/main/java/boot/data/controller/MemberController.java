@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import boot.data.dto.ExhibitionDto;
@@ -460,23 +461,25 @@ public class MemberController {
 		return "/member/myprofile";
 	}
 
-	/*
-	 * @PostMapping("/member/updateprofile") public String updateprofile(MemberDto
-	 * dto, MultipartFile upload, HttpSession session) {
-	 * 
-	 * String path = session.getServletContext().getRealPath("/photo"); String
-	 * fileName = UUID.randomUUID().toString() + "_" + upload.getOriginalFilename();
-	 * 
-	 * if (upload.isEmpty()) { dto.setMember_photo(null);
-	 * 
-	 * } else { dto.setMember_photo(fileName);
-	 * 
-	 * try { upload.transferTo(new File(path + "\\" + fileName)); } catch
-	 * (IllegalStateException e) { // TODO Auto-generated catch block
-	 * e.printStackTrace(); } catch (IOException e) { // TODO Auto-generated catch
-	 * block e.printStackTrace(); } } mservice.MemberProfileUpdate(dto); return
-	 * "redirect:/myinfo"; }
-	 */
+	
+	  @PostMapping("/member/updatedata") 
+		public String updatedata(MemberDto dto, HttpSession session,
+				String member_nickname ,String member_pass,String member_hp ) {
+		  
+		  String loginemail = (String) session.getAttribute("loginemail");
+		  System.out.println(loginemail);
+			  String mn= member_nickname.toString(); dto.setMember_nickname(mn);
+			  System.out.println(mn);
+			  
+			  String mp= member_pass.toString(); dto.setMember_pass(mp);
+			  
+			  System.out.println(mp); String mhp= member_hp.toString();
+			  dto.setMember_hp(mhp); System.out.println(mhp);
+			 System.out.println(dto);
+	   mservice.MemberDataUpdate(dto); 
+	 return "redirect:/myinfo"; 
+	 }
+	 
 	
 	
 	

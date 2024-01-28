@@ -95,6 +95,8 @@ public class MemberService implements MemberServiceInter{
 		// TODO Auto-generated method stub
 		mapper.MemberProfileUpdate(dto);
 	}
+	
+	
 
 	@Override
 	public int MemberEmailCheck(String member_name, String member_hp, String member_birth) {
@@ -176,23 +178,14 @@ public class MemberService implements MemberServiceInter{
         mapper.updateTemporarilyPass(map);
 	}
 
-	
-	
+	@Override
+	public void MemberDataUpdate(MemberDto dto) {
+		// TODO Auto-generated method stub
+		mapper.MemberDataUpdate(dto);
+		
+	}
 
 	
-
-	
-
-	
-
-	
-
-	
-	
-
-	
-	
-
 	
 
 }

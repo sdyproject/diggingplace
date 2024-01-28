@@ -27,7 +27,7 @@
 <style type="text/css">
 .myinfo-wrapper {
 	width: 650px;
-	height: 750px;
+	height: 300px;
 	margin: 0 auto;
 	text-align: center;
 	margin-top: 30px;
@@ -103,6 +103,8 @@ margin-bottom: 7px;
 	box-shadow:0px 0px 5px #BDBDBD;
 	font-size: 15px;
 	border-radius: 10px;
+	text-align: center;
+
 }
 
 #myinfo-update span {
@@ -217,6 +219,18 @@ input[type="file"]+label {
 	width: 300px;
 
 }
+.profile-update {
+	margin-left: 13px;
+	background-color: #BDBDBD;
+	width: 80px;
+	border-radius: 10px;
+	border: none;
+	height: 25px;
+	font-size: 11px;
+	color: white;
+	height: 25px;
+	box-shadow: 0px 0px 5px #BDBDBD; 
+}
 </style>
 <script type="text/javascript">
 	$(function () {
@@ -259,7 +273,7 @@ input[type="file"]+label {
 		 
 		
 	  // 폼 제출 이벤트 핸들러 함수
-	  $("#updateprofile").submit(function(event) {
+	  $("#updatedata").submit(function(event) {
 	    // 이메일 중복 체크 결과가 0이 아니면 폼 제출 방지
 	    
 	    
@@ -360,22 +374,29 @@ input[type="file"]+label {
 					<input type="file" class="profile-management"
 						id="profile-management" name="image" accept="image/*"
 						onchange="readURL(this);"
-						style="display: none;">
+						style="display: none; ">
 						<label for="profile-management">프로필
-						변경</label>
+						수정</label>
+					<br>
 					
-					
+					<button type="submit" class="profile-update" style="display: none;"></button>
 					
 				</div>
-
+						
 
 
 			</div>
+			</div>
+			</form>
+			
+			<form action="/member/updatedata" method="post"
+						enctype="multipart/form-data" id="updatedata">
+				<input type="hidden" name="member_num" value="${member_num}" id="member_num">
 			<div id="myinfo-update">
 				<div class="update-content">
 				<br>
 					<div>
-						<span><b>닉네임</b></span> <br> <input type="text"
+						<span><b>닉네임</b></span> <br> <input type="text" maxlength="10"
 							name="member_nickname" value="${dto.member_nickname}" id="member_nickname" autocomplete='off'>
 							<br>
 					<span class="nicknameok" style="margin-left:60px;font-size: 9px;color: #6E6E6E;width: 300px;"></span>		
@@ -396,14 +417,14 @@ input[type="file"]+label {
 
 					<div id="update-button">
 						<button type="button" class="page-back" >이전</button>
-						<button type="submit" class="profile-update">수정하기</button>
+						<button type="submit" class="profile-updates">수정하기</button>
 					</div>
 			</div>
 
 
+				</form>
+		
 
-		</div>
-	</form>
 	<script type="text/javascript">
 		$(function() {
 			$("#profile-management").click(function() {
@@ -420,6 +441,8 @@ input[type="file"]+label {
 
 				}
 				reader.readAsDataURL(input.files[0]);
+				$(".profile-update").trigger("click");
+				
 			}
 		};
 
@@ -429,7 +452,6 @@ input[type="file"]+label {
 		
 		
 		
-
 		
 		
 	</script>

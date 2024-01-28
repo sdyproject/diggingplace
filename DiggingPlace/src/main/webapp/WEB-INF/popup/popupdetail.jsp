@@ -71,7 +71,7 @@ ul, li {
 
 .Likecount {
 	color: #6E6E6E;
-	margin-right: 10px;
+	margin-right: 15px;
 	font-size: 1.5em;
 }
 /*좋아요 css  */

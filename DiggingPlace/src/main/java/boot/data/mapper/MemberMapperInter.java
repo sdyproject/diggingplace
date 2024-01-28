@@ -22,6 +22,7 @@ public interface MemberMapperInter {
 	public MemberDto getDataByEmail(String member_email);
 	public void deleteMember(String member_num);
 	public void MemberProfileUpdate(MemberDto dto);
+	public void MemberDataUpdate(MemberDto dto);
 	public MemberDto getDataByMemberNum(String member_num);
 	public String findEmailMemberNum(String member_email);
 	public void kakaoinsert(Map<String, String> loginok);

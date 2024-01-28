@@ -32,4 +32,5 @@ build/
 .vscode/
 
 ### Ecllipse ###
-.metadata
+/diggingplace/.metadata/.plugins/org.eclipse.core.resources/.history
+

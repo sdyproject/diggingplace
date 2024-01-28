@@ -229,8 +229,9 @@ margin-right: 3px;
   .Likecount{
 
 font-size: 10px;
-color: black;
-margin-right: 11px;
+color: #5d6361;
+margin-right: 8px;
+
 }
 
 </style>

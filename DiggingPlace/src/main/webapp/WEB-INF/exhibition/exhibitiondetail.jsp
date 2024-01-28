@@ -70,7 +70,7 @@ ul, li {
 
 .Likecount {
 	color: #6E6E6E;
-	margin-right: 10px;
+	margin-right: 15px;
 	font-size: 1.5em;
 }
 /*좋아요 css  */
@@ -747,14 +747,16 @@ map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 								<c:if test="${e.member_photo!=null }">
 									<img alt="" src="${e.member_photo}"
 										id="profile-img">
-								</c:if>
-								<c:if test="${e.member_nickname!=null}">
-								<b>${e.member_nickname}</b>
-								</c:if>
-								<c:if test="${e.member_nickname==null}">
-								<b>${e.member_name}</b>
-								</c:if>
 								
+								</c:if>
+								<c:choose>
+								<c:when test="${e.member_nickname!=null}">
+								<b>${e.member_nickname}</b>
+								</c:when>
+								<c:when test="${e.member_nickname==null}">
+								<b>${e.member_name}</b>
+								</c:when>
+								</c:choose>
 								<c:choose>
 									<c:when test="${e.review_score==1}">
 										<label>★</label>

@@ -45,7 +45,7 @@
 	<select id="LoginEmailPassCheck" parameterType="Map" resultType="int">
 		select count(*) 
 		from member 
-		where member_email = #{member_email} and member_pass = #{member_pass}
+		where member_email = #{member_email} and binary member_pass = #{member_pass}
 	</select>
 
 
@@ -63,10 +63,15 @@
 	<!-- 프로필 수정 -->
     <update id="MemberProfileUpdate" parameterType="MemberDto">
     	update member set 
+    	member_photo=#{member_photo}
+    	where member_num=#{member_num}
+    </update>
+    
+    <update id="MemberDataUpdate" parameterType="Map">
+    	update member set 
     	member_nickname=#{member_nickname},
     	member_pass=#{member_pass},
-    	member_hp=#{member_hp},
-    	member_photo=#{member_photo}
+    	member_hp=#{member_hp}
     	where member_num=#{member_num}
     </update>
 	

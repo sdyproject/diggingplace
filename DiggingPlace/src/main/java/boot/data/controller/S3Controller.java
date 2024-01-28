@@ -42,7 +42,7 @@ public class S3Controller {
 		String loginemail = (String) session.getAttribute("loginemail");
 		String nickname = mservice.getMemberName(loginemail);
 		System.out.println(nickname);
-		String name = UUID.randomUUID().toString() + "_" + image.getOriginalFilename();
+		String name = nickname.toString() + "_" + image.getOriginalFilename();
 		String bucketkey = uploadprofile + name;
 		ObjectMetadata objectMetadata = new ObjectMetadata();
 		objectMetadata.setContentType(image.getContentType());
@@ -53,13 +53,16 @@ public class S3Controller {
 		log.debug("s3 파일 업로드 완료");
 		String uploadurl = amazonS3Client.getUrl(bucket, bucketkey).toString();
 		System.out.println(uploadurl);
-		if (image.isEmpty()) {
+		
+		
+		
+		/*if (image.isEmpty()) {
 			dto.setMember_photo(null);
-		} else {
+		} else {*/
 			dto.setMember_photo(uploadurl);
 			
 			
-		}
+			/* } */
 		mservice.MemberProfileUpdate(dto);
 		return "redirect:/myinfo";
 	}
