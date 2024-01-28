@@ -3,7 +3,7 @@
 <mapper namespace="boot.data.mapper.ExhibitionLikeMapperInter">
 
 <insert id="insertExhibitionLike" parameterType="ExhibitionLikeDto">
-		insert into exhibition_like values(null, #{exhibition_num}, #{member_num})
+		insert into exhibition_like values(null, #{exhibition_num}, #{member_num},null)
 </insert>
 
 <delete id="deleteExhibitionLike" parameterType="Map">

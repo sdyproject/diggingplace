@@ -1,0 +1,26 @@
+# S3
+cloud:
+  aws:
+    stack:
+      auto: false 
+    region:
+      static: ap-northeast-2
+    credentials: 
+      access-key: AKIATMI7KEOJISZHPPBP
+      secret-key: 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
+    s3:
+      bucket: digging-bucket
+      upload-profile: member/upload/profile/
+      
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+      
+#mysql
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://digginplacedb.cryk4wey42p2.ap-northeast-2.rds.amazonaws.com:3306/sdydb?serverTimezone=Asia/Seoul
+    username: sdy5508
+    password: sdy714593

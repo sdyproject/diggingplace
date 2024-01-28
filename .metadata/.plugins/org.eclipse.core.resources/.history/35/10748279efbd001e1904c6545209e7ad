@@ -64,8 +64,6 @@ spring:
 #      enabled: true
 
 
-
-
 #mybatis
 mybatis:
   type-aliases-package: boot.data.dto,boot.data.mapper

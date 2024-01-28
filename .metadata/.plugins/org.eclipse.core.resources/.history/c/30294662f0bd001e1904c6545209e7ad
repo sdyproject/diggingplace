@@ -105,9 +105,9 @@ filter: opacity(0.2) drop-shadow(0 0 0 #BDBDBD);
 	 		 
 		<a href="/login/logoutprocess">로그아웃</a>
 	  </c:if>
-	  <c:if test="${empty loginok}"> 
+	  
         <a href="/member/memberform">회원가입</a>
-        </c:if>
+        
         <c:if test="${not empty loginok}">
         <a href="/myinfo">My</a>
         </c:if>
