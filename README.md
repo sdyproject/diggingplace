@@ -24,11 +24,11 @@
 ## 주요 기능 
 |                                                  <b>전시회,팝업 정렬,상세페이지 조회</b>                                                   |                                                   <b>전시회,팝업 좋아요 기능</b>                                                   |
 |:----------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------:|
-| <img width="80%" src="https://github.com/sdyproject/diggingplace/assets/126428651/6ff6249e-e4b0-4b3a-ba52-79db6eecbe68"> | <img width="80%" src="https://github.com/sdyproject/diggingplace/assets/126428651/a20f9209-291f-4572-b545-a5c8d90eabcd">   |
+| <img width="100%" height="100%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/6ff6249e-e4b0-4b3a-ba52-79db6eecbe68"> | <img width="100%" height="100%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/a20f9209-291f-4572-b545-a5c8d90eabcd">   |
 |                                                    <b>간편 로그인 기능</b>                                                     |                                                   <b>임시 비밀번호 기능</b>                                                    |
-|  ??  | <img width="80%" src="https://github.com/sdyproject/diggingplace/assets/126428651/4548fc63-526b-4cf9-aed7-d61c970bd630">    | </br>
+|  ??  | <img width="100%" height="100%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/4548fc63-526b-4cf9-aed7-d61c970bd630">    | </br>
 |                                                   <b>리뷰 작성,수정,삭제 기능</b>                                                    |                                                  <b>마이페이지 정보 조회,수정</b>                                                   |
-| <img width="80%" src="https://github.com/sdyproject/diggingplace/assets/126428651/94572416-3c46-4ecc-a926-09924ee3bce4">  | <img width="80%" src="https://github.com/sdyproject/diggingplace/assets/126428651/86dd8d8b-170a-483d-8435-23a325ccba76"> | </br>
+| <img width="100%" height="100%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/94572416-3c46-4ecc-a926-09924ee3bce4">  | <img width="100%" height="100%" src="https://github.com/sdyproject/diggingplace/assets/126428651/86dd8d8b-170a-483d-8435-23a325ccba76"> | </br>
 
 <br></br>
 
