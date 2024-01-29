@@ -18,7 +18,7 @@
 - 
 - 
 
-<img width="80%" src="https://github.com/sdyproject/diggingplace/assets/126428651/a20f9209-291f-4572-b545-a5c8d90eabcd">
+
 
 <br></br>
 ## 주요 기능 
