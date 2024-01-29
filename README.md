@@ -52,7 +52,7 @@
 
 ### User Flow
 
-### DB Schema
+### [DB Schema](https://github.com/sdyproject/diggingplace/assets/126428651/d3d7f019-f3f4-4b7d-83c6-554ee486ac00)
 
 ### API 문서
 
