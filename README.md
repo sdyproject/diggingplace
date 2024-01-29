@@ -14,9 +14,14 @@
 
 ## 프로젝트 소개 
 
-- 
-- 
-- 
+- 전시회와 팝업 스토어 정보 한번에 찾아볼수 있는 웹 사이트 입니다.
+- sns만을 보게 되더라도 많은 사람들이 전시회,팝업 스토어에서 시간을 보냅니다.
+  
+-**Diggingplace 라는 웹 사이트를 만들게 된 계기이기도 하며
+-**한번에 두 컨턴츠의 정보를 얻을수 있다면 좋겠다 라는 생각에 프로젝트를 진행하였습니다.
+
+  
+  
 
 
 
@@ -37,24 +42,21 @@
 ## 프로젝트 기술스택 
 
 ### 프론트엔드
-
+<img width="100%" height="100%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/613ac374-420b-41f2-82fb-4723e0fadb1b">
 
 ### 백엔드
-
+<img width="100%" height="100%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/808db35a-3cc5-44e7-828f-eed79ac2a2d7">
 
 ### 인프라
-
+<img width="100%" height="100%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/ca1adf0a-5644-4b6c-9091-6829bbdf0b7e">
 
 
 
 
 ## 프로젝트 아키텍쳐 & 문서 
+### DB Schema 
+<img width="100%" height="100%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/d3d7f019-f3f4-4b7d-83c6-554ee486ac00">
 
-### User Flow
-
-### [DB Schema](https://github.com/sdyproject/diggingplace/assets/126428651/d3d7f019-f3f4-4b7d-83c6-554ee486ac00)
-
-### API 문서
 
 ## CI/CD
 
