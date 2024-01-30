@@ -45,24 +45,24 @@
 ## 프로젝트 기술스택 
 
 ### 프론트엔드
-<img width="70%" height="70%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/613ac374-420b-41f2-82fb-4723e0fadb1b">
+<img width="50%" height="70%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/613ac374-420b-41f2-82fb-4723e0fadb1b">
 
 ### 백엔드
-<img width="70%" height="70%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/808db35a-3cc5-44e7-828f-eed79ac2a2d7">
+<img width="50%" height="70%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/808db35a-3cc5-44e7-828f-eed79ac2a2d7">
 
 ### 인프라
-<img width="70%" height="70%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/ca1adf0a-5644-4b6c-9091-6829bbdf0b7e">
+<img width="50%" height="70%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/37c2e105-64a9-4d26-afdc-b5f943603d04">
 
 
 
 <br></br>
 ## 프로젝트 아키텍쳐 & 문서 
 ### DB Schema 
-<img width="70%" height="70%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/d3d7f019-f3f4-4b7d-83c6-554ee486ac00">
+<img width="100%" height="90%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/d3d7f019-f3f4-4b7d-83c6-554ee486ac00">
 
 
 ## CI/CD
-<img width="70%" height="70%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/09b49760-5c24-4803-95ed-a4d2fd192dcd">
+<img width="100%" height="90%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/09b49760-5c24-4803-95ed-a4d2fd192dcd">
 
 
 
