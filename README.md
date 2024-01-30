@@ -18,7 +18,7 @@
 - 전시회와 팝업 스토어 정보 한번에 찾아볼수 있는 웹 사이트 입니다.
 
   
-> **특정 장소에서 특별한 경험을 할 수 있는 팝업 스토어, 전시회가 많이 진행되고 있습니다.**
+> **특정 장소에서 특별한 경험을 할 수 있는 팝업 스토어, 전시회가 많이 진행되고 있습니다.** <br>
 > **한 번에 두 컨텐츠의 정보를 얻을수 있다면 좋겠다는 생각에 프로젝트를 진행하였습니다.**
 
 
@@ -58,11 +58,11 @@
 <br></br>
 ## 프로젝트 아키텍쳐 & 문서 
 ### DB Schema 
-<img width="100%" height="100%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/d3d7f019-f3f4-4b7d-83c6-554ee486ac00">
+<img width="70%" height="70%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/d3d7f019-f3f4-4b7d-83c6-554ee486ac00">
 
 
 ## CI/CD
-
+<img width="70%" height="70%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/09b49760-5c24-4803-95ed-a4d2fd192dcd">
 
 
 
