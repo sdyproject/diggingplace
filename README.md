@@ -36,7 +36,7 @@
 |                                                    <b>간편 로그인 기능</b>                                                     |                                                   <b>전시회,팝업 스토어 좋아요 기능</b>                                                    |
 |  ??  | <img width="100%" height="100%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/a20f9209-291f-4572-b545-a5c8d90eabcd">    | </br>
 |                                                   <b>리뷰 작성,수정,삭제 기능</b>                                                    |                                                  <b>마이페이지 정보 조회,수정</b>                                                   |
-| <img width="100%" height="100%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/94572416-3c46-4ecc-a926-09924ee3bce4">  | <img width="100%" height="100%" src="https://github.com/sdyproject/diggingplace/assets/126428651/86dd8d8b-170a-483d-8435-23a325ccba76"> | </br>
+| <img width="100%" height="100%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/ed66049e-5aca-4f57-bd5a-94731a224aeb">  | <img width="100%" height="100%" src="https://github.com/sdyproject/diggingplace/assets/126428651/86dd8d8b-170a-483d-8435-23a325ccba76"> | </br>
 
 <br></br>
 
