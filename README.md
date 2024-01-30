@@ -51,7 +51,7 @@
 <img width="50%" height="70%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/808db35a-3cc5-44e7-828f-eed79ac2a2d7">
 
 ### 인프라
-<img width="50%" height="70%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/37c2e105-64a9-4d26-afdc-b5f943603d04">
+<img width="60%" height="70%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/37c2e105-64a9-4d26-afdc-b5f943603d04">
 
 
 
