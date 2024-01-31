@@ -34,12 +34,12 @@
 |:----------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------:|
 | <img width="100%" height="100%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/6ff6249e-e4b0-4b3a-ba52-79db6eecbe68"> | <img width="100%" height="100%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/4548fc63-526b-4cf9-aed7-d61c970bd630">   |
 |                                                    <b>간편 로그인 기능</b>                                                     |                                                   <b>전시회,팝업 스토어 좋아요 기능</b>                                                    |
-|  ??  | <img width="100%" height="100%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/a20f9209-291f-4572-b545-a5c8d90eabcd">    | </br>
+|  <img width="100%" height="100%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/1c7e886c-b272-402d-b43a-84a81412410c
+">  | <img width="100%" height="100%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/a20f9209-291f-4572-b545-a5c8d90eabcd">    | </br>
 |                                                   <b>리뷰 작성,수정,삭제 기능</b>                                                    |                                                  <b>마이페이지 정보 조회,수정</b>                                                   |
 | <img width="100%" height="100%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/ed66049e-5aca-4f57-bd5a-94731a224aeb">  | <img width="100%" height="100%" src="https://github.com/sdyproject/diggingplace/assets/126428651/86dd8d8b-170a-483d-8435-23a325ccba76"> | </br>
 
 <br></br>
-
 
 
 ## 프로젝트 기술스택 
