@@ -8,7 +8,7 @@
 
 - **프로젝트 명 :** Diggingplace 
 - **프로젝트 기간 :** 23/9/15 ~ 24/1/29
-- **배포 링크 :** https:// 
+- **배포 링크 :** https://www.diggingplace.com
 
 
 
