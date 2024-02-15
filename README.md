@@ -7,59 +7,61 @@
 </div>
 
 - **프로젝트 명 :** Diggingplace 
-- **프로젝트 기간 :** 
+- **프로젝트 기간 :** 23/9/15 ~ 24/1/29
+- **배포 링크 :** https://www.diggingplace.com
 
 
 
 
 ## 프로젝트 소개 
 
-- 
-- 
-- 
+- 전시회와 팝업 스토어 정보 한 번에 찾아볼 수 있는 웹 사이트
+
+  
+> **특정 장소에서 특별한 경험을 할 수 있는 팝업 스토어, 전시회가 많이 진행되고 있습니다.** <br>
+> **한 번에 두 컨텐츠의 정보를 얻을수 있다면 좋겠다는 생각에 프로젝트를 진행하였습니다.**
+
+
+
+  
+  
 
 
 
 <br></br>
 ## 주요 기능 
-
-
-|                                                  <b>전시회,팝업 스토어 상세페이지 조회</b>                                                   |                                                   <b>전시회,팝업 스토어 좋아요 </b>                                                   |
+|                                                  <b>전시회,팝업 스토어 정렬,상세페이지 조회</b>                                                   |                                                   <b>임시 비밀번호 기능</b>                                                   |
 |:----------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------:|
-|  |   |
-|                                                    <b>후기 전체 조회</b>                                                     |                                                   <b>후기 등록</b>                                                    |
-|      |    | </br>
-|                                                  <b>마이페이지</b>                                                   |                                                  <b>임시 비밀번호 발급</b>                                                                     
-|  | </br>
+| <img width="100%" height="100%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/6ff6249e-e4b0-4b3a-ba52-79db6eecbe68"> | <img width="100%" height="100%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/4548fc63-526b-4cf9-aed7-d61c970bd630">   |
+|                                                    <b>간편 로그인 기능</b>                                                     |                                                   <b>전시회,팝업 스토어 좋아요 기능</b>                                                    |
+|  <img width="100%" height="100%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/1c7e886c-b272-402d-b43a-84a81412410c">  | <img width="100%" height="100%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/a20f9209-291f-4572-b545-a5c8d90eabcd">    | </br>
+|                                                   <b>리뷰 작성,수정,삭제 기능</b>                                                    |                                                  <b>마이페이지 정보 조회,수정</b>                                                   |
+| <img width="100%" height="100%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/ed66049e-5aca-4f57-bd5a-94731a224aeb">  | <img width="100%" height="100%" src="https://github.com/sdyproject/diggingplace/assets/126428651/86dd8d8b-170a-483d-8435-23a325ccba76"> | </br>
 
 <br></br>
 
 
-<br></br>
 ## 프로젝트 기술스택 
 
 ### 프론트엔드
-
+<img width="50%" height="70%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/613ac374-420b-41f2-82fb-4723e0fadb1b">
 
 ### 백엔드
-
+<img width="50%" height="70%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/808db35a-3cc5-44e7-828f-eed79ac2a2d7">
 
 ### 인프라
+<img width="60%" height="70%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/37c2e105-64a9-4d26-afdc-b5f943603d04">
 
 
 
-
-
+<br></br>
 ## 프로젝트 아키텍쳐 & 문서 
+### DB Schema 
+<img width="100%" height="90%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/d3d7f019-f3f4-4b7d-83c6-554ee486ac00">
 
-### User Flow
-
-### DB Schema
-
-### API 문서
 
 ## CI/CD
-
+<img width="100%" height="90%"  src="https://github.com/sdyproject/diggingplace/assets/126428651/09b49760-5c24-4803-95ed-a4d2fd192dcd">
 
 
 
