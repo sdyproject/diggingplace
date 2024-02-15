@@ -187,12 +187,7 @@ input[type="file"]+label {
 	margin-left: 15px;
 }
 
-/* input[type="file"]+label:hover {
-	background-color: #fff;
-	color: #747f55;
-	border: 1px solid #747f55;
-}
- */
+
  
 #member-del{
 	background-color: #BDBDBD;

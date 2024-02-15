@@ -1,7 +1,7 @@
 package boot.data.controller;
 
 import java.io.IOException;
-import java.util.UUID;
+
 
 import javax.servlet.http.HttpSession;
 
@@ -40,9 +40,8 @@ public class S3Controller {
 	public String updateprofile(MultipartFile image, HttpSession session, MemberDto dto) throws IOException {
 
 		String loginemail = (String) session.getAttribute("loginemail");
-		String nickname = mservice.getMemberName(loginemail);
-		System.out.println(nickname);
-		String name = nickname.toString() + "_" + image.getOriginalFilename();
+		/* String nickname = mservice.getMemberName(loginemail); */
+		String name = loginemail.toString() + "_" + image.getOriginalFilename();
 		String bucketkey = uploadprofile + name;
 		ObjectMetadata objectMetadata = new ObjectMetadata();
 		objectMetadata.setContentType(image.getContentType());
@@ -56,13 +55,11 @@ public class S3Controller {
 		
 		
 		
-		/*if (image.isEmpty()) {
-			dto.setMember_photo(null);
-		} else {*/
+		
 			dto.setMember_photo(uploadurl);
 			
 			
-			/* } */
+		
 		mservice.MemberProfileUpdate(dto);
 		return "redirect:/myinfo";
 	}
